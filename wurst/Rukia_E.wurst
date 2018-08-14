@@ -1,0 +1,77 @@
+package Rukia_E
+
+import ClosureForGroups
+import ClosureTimers
+import RegisterEvents
+import Fast
+import initlater Rukia_E_ALT
+import Rukia_R
+
+class Rukia_E
+    static let id = 'D000'
+    static let affectedUnits = CreateGroup()
+
+let stunDurationCoof = 0.5
+let stunDurationBase = 2
+let range = 1200.
+let speed = 100.
+let aoe = 90.
+let stunEffectName = "Bakudo61.mdx"
+let bindEffectName = "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl"
+let shellId = 'e006'
+let castSound = gg_snd_Rukia_E_01
+let interval = 0.025
+
+function cast(unit caster, vec2 castPoint)
+    let spellLevel = caster.getAbilityLevel(Rukia_E.id)
+    let damage = caster.getInt(true).toReal()
+    let stunDuration = stunDurationBase + stunDurationCoof * spellLevel
+    let spellFaceAngle = angleBetween(caster, castPoint)
+    let casterOwner = caster.getOwner()
+    let spawnPos = getPosToward(caster, 70, spellFaceAngle)
+    let shell = createUnit(casterOwner, shellId, spawnPos, angleBetween(spawnPos, castPoint))
+
+    castSound.play()
+
+    doPeriodicallyTimed(interval, range / speed * interval) cb ->
+        moveForward(shell, speed)
+
+        forNearestUnit(shell.getPos(), aoe, null) target ->
+            if not IsUnitAlly(target, casterOwner) and target.isAlive()
+                caster.damageTarget(target, damage)
+                flashEffect(bindEffectName, target.getPos())
+                Rukia_E.affectedUnits.addUnit(target)
+                doAfter(stunDuration, () -> Rukia_E.affectedUnits.removeUnit(target))
+                stunWithEffect(target, stunDuration, stunEffectName)
+                cb.stop()
+
+        if cb.isLast()
+            shell.kill()
+            doAfter(2, () -> shell.remove())
+
+function getNear(vec2 selectPos, real range) returns unit
+    let selectGroup = CreateGroup()
+    selectGroup.enumUnitsInRange(selectPos, range)
+
+    if selectGroup.size() > 0
+        var selectedUnit = FirstOfGroup(selectGroup)
+
+        return selectedUnit
+    else
+        return null
+
+init
+    registerSpellEffectEvent(Rukia_E.id) ->
+        let caster = GetTriggerUnit()
+        let castPoint = getSpellTargetPos()
+
+        if not caster.hasAbility(Rukia_R.spell.disableId)
+            cast(caster, castPoint)
+        else
+            Rukia_E_ALT.spell.cast(caster, castPoint)
+
+
+
+
+
+

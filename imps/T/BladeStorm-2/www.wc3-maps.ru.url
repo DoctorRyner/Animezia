@@ -1,0 +1,13 @@
+[DEFAULT]
+BASEURL=http://counter-strike.cn.ua/
+[DOC#12#14]
+BASEURL=http://counter-strike.cn.ua/DreamHC/Page2.html
+ORIGURL=DreamHC/Start.htm
+[InternetShortcut]
+URL=http://www.wc3-maps.ru/
+IDList=
+HotKey=0
+IconFile=http://www.all-cs.net.ru/favicon.ico
+IconIndex=1
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,2

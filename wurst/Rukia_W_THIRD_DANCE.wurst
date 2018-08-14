@@ -1,0 +1,60 @@
+package Rukia_W_THIRD_DANCE
+
+import ClosureTimers
+import Fast
+
+class Rukia_W_THIRD_DANCE
+    static let spell = new Spell()
+
+class Spell
+    let castDistance = 150.
+    let castRange = 150.
+    let minHpPercent = 20
+    let stunInterval = 0.01
+    let castAnimDuration1 = 3.2
+    let castAnimDuration2 = 0.15
+    let castAnim = 15
+    let attackAnim = 15
+
+    let stunSfxPath = "Abilities\\Spells\\Undead\\FreezingBreath\\FreezingBreathTargetArt.mdl"
+    let blinkSfx = "BlackBlink.mdx"
+    let dmgSfxPath = "blood.mdx"
+
+    let castSound = gg_snd_Rukia_W_02
+
+    function cast(unit caster, unit victim)
+        let damage = caster.getInt(true) + (caster.getMaxHP() - caster.getHP()) / 2
+        let stunSfx = victim.addEffect(stunSfxPath, "origin")
+        castSound.play()
+        doPeriodicallyTimed(stunInterval, castAnimDuration1) cb ->
+            if caster.isAlive()
+                caster.issueImmediateOrderById(STUN)
+                victim.issueImmediateOrderById(STUN)
+                caster.setAnimation(castAnim)
+                caster.setFacing(angleBetween(caster, victim).asAngleDegrees())
+            else
+                stunSfx.destr()
+                cb.stop()
+
+            if cb.isLast()
+                if caster.isAlive()
+                    caster.setTimeScale(3)
+                    caster.setAnimation(attackAnim)
+                    flashEffect(blinkSfx, caster.getPos())
+                    doPeriodicallyTimed(stunInterval, castAnimDuration2) cb ->
+                        caster.issueImmediateOrder("stop")
+                        victim.issueImmediateOrder("stop")
+
+                        if cb.isLast()
+                            caster.setTimeScale(1)
+                            stunSfx.destr()
+                            flashEffect(dmgSfxPath, victim.getPos())
+                            caster.setPos(getPosToward(victim, 100, angleBetween(caster, victim)))
+                            flashEffect(blinkSfx, caster.getPos())
+                            caster.damageTarget(victim, damage)
+
+                            doPeriodicallyTimed(stunInterval, 0.5) cb ->
+                                caster.issueImmediateOrder("stop")
+                else
+                    stunSfx.destr()
+

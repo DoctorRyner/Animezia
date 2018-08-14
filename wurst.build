@@ -1,0 +1,10 @@
+---
+projectName: "Rukia"
+dependencies:
+- "https://github.com/wurstscript/wurstStdlib2"
+- "https://github.com/DoctorRyner/wurst-fast-lib"
+buildMapData:
+  name: "Rukia Spell Pack"
+  fileName: "Rukia"
+  author: "DoctorRyner"
+  playerCount: 1

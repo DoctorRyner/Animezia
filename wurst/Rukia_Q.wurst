@@ -1,0 +1,83 @@
+package Rukia_Q
+
+import ClosureForGroups
+import ClosureTimers
+import RegisterEvents
+import Fast
+import Rukia_R
+import initlater Rukia_Q_ALT
+import Rukia_E
+
+class Rukia_Q
+    static let spell = new Spell()
+
+class Spell
+    let id = 'D001'
+    let speed = 50.
+    let distance = 1600.
+    let stumbleRadius = 140.
+    let expRadius = 380.
+    let sokatsuiExpId = 'e000'
+
+    let sokatsuiId = 'e007'
+    let castSound = gg_snd_Rukia_Q_01
+    let doubleCastSound = gg_snd_Rukia_Q_02
+    let interval = 0.025
+
+    function cast(unit caster, vec2 castPoint, bool shouldPlaySound)
+        let spellLvl = caster.getAbilityLevel(id)
+        let damage = spellLvl * 20. + spellLvl * caster.getInt(true)
+        let casterOwner = caster.getOwner()
+        let duration = distance / speed * interval
+        let spellAngle = angleBetween(caster, castPoint)
+        
+        let sokatsui = createUnit(casterOwner, sokatsuiId, getPosToward(caster, 60, spellAngle), spellAngle)
+
+        if shouldPlaySound
+            castSound.play()
+
+        doPeriodicallyTimed(interval, duration) cb ->
+            if not cb.isLast() and not sokatsui.isAlive()
+                cb.stop()
+            moveForward(sokatsui, speed)   
+            let sokatsuiPos = sokatsui.getPos()
+
+            forUnitsInRange(sokatsuiPos, stumbleRadius) victim ->
+                if not IsUnitAlly(victim, casterOwner) and victim.isAlive()
+                    cb.stop()
+
+            if cb.isLast()
+                sokatsui.kill()
+                createUnit(casterOwner, sokatsuiExpId, sokatsuiPos, 0).kill()
+                
+                forUnitsInRange(sokatsuiPos, expRadius) victim ->
+                    if IsUnitEnemy(victim, casterOwner) and victim.isAlive()
+                        caster.damageTarget(victim, damage)
+
+init
+    registerSpellEffectEvent(Rukia_Q.spell.id) ->
+        let caster = GetTriggerUnit()
+        let castPoint = getSpellTargetPos()
+
+        if not caster.hasAbility(Rukia_R.spell.disableId)
+            let prober = getNearestEnemy(castPoint, caster.getOwner(), 100)
+
+            if prober == null or not Rukia_E.affectedUnits.contains(prober)
+                Rukia_Q.spell.cast(caster, castPoint, true)
+            else
+                Rukia_Q.spell.doubleCastSound.play()
+                doPeriodicallyTimed(0.01, 0.05) cb ->
+                    caster.issueImmediateOrderById(STUN)
+                    caster.setAnimation(7)
+
+                    if cb.isLast()
+                        Rukia_Q.spell.cast(caster, castPoint, false)
+                        
+                        doPeriodicallyTimed(0.01, 0.5) cb ->
+                            caster.issueImmediateOrderById(STUN)
+
+                            if cb.isLast()
+                                Rukia_Q.spell.cast(caster, castPoint, false)
+
+        else
+            Rukia_Q_ALT.spell.cast(caster, castPoint)

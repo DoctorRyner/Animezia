@@ -1,0 +1,43 @@
+package Rukia_R
+
+import RegisterEvents
+import ClosureTimers
+
+class Rukia_R
+    static let spell = new Spell()
+
+class Spell
+    let id = 'D003'
+    let disableId = 'D004'
+    let dummyForBankaiId = 'e00B'
+    // let auraEffectName = "RukiaAura.mdx"
+    let auraEffectName = "HolyBlessing.mdx"
+    let interval = 0.025
+    let castSound = gg_snd_Rukia_R_01
+
+    function cast(unit caster)
+        let manaPercentage = 8 - 1 * caster.getAbilityLevel(id)
+        let manaPerInterval = manaPercentage / 100 / (1 / interval)
+        SetPlayerAbilityAvailable(caster.getOwner(), id, false)
+        caster.addAbility(disableId)
+        castSound.play()
+
+        let auraSfx = caster.addEffect(auraEffectName, "origin")
+        let dummyForBankai = CreateUnit(caster.getOwner(), dummyForBankaiId, 0, 0, 0)
+
+        doPeriodically(interval) cb ->
+            let casterMana = caster.getMana()
+            if caster.isAlive() and caster.hasAbility(disableId) and casterMana >= 20
+                caster.setMana(casterMana - (caster.getMaxMana() * manaPerInterval))
+            else
+                dummyForBankai.remove()
+                auraSfx.destr()
+                caster.removeAbility(disableId)
+                SetPlayerAbilityAvailable(caster.getOwner(), id, true)
+                destroy cb
+
+init
+    registerSpellEffectEvent(Rukia_R.spell.id) ->
+        Rukia_R.spell.cast(GetTriggerUnit())
+    registerSpellEffectEvent(Rukia_R.spell.disableId) ->
+        GetTriggerUnit().removeAbility(Rukia_R.spell.disableId)

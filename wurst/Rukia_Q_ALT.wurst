@@ -1,0 +1,102 @@
+package Rukia_Q_ALT
+
+import ClosureForGroups
+import ClosureTimers
+import Fast
+import Rukia_E_ALT
+import Rukia_Q
+
+class Rukia_Q_ALT
+    static let spell = new Spell()
+
+class Spell
+    let castSound = gg_snd_Rukia_Q_ALT_01
+    let doubleCastSound = gg_snd_Rukia_Q_ALT_02
+    let dummyId = 'e008'
+    let distance = 4500
+    let expRange = 100.
+    let stumbleRange = 100.
+    let detectRange = 600.
+    let detectRotationTime = 0.5
+    let detectOffset = 300.
+    let speed = 15.
+    let interval = 0.025
+    let spawnMin = 1
+    let spawnMax = 10
+    let spawnAngleRnd = 30.
+    let damageExpId = 'e000'
+    let damageExpScale = 0.22
+
+    function shellFly(unit shell, real damage, real flyTime, player casterOwner, unit caster)
+        let followUnit = CreateGroup()
+        doPeriodicallyTimed(interval, flyTime) cb ->
+            moveForward(shell, speed)
+            let shellPos = shell.getPos()
+            forNearestUnit(shellPos, detectRange, null) target ->
+
+                if target.isAlive() and IsUnitEnemy(target, casterOwner)
+                    SetUnitFacingTimed(shell, angleBetween(shell, target), detectRotationTime)
+
+            forNearestUnit(shellPos, stumbleRange, null) victim ->
+                if victim.isAlive() and IsUnitEnemy(victim, casterOwner)
+                    cb.stop()
+
+            if cb.isLast()
+                followUnit.destr()
+                forUnitsInRange(shellPos, expRange) victim ->
+                    if victim.isAlive() and IsUnitEnemy(victim, casterOwner)
+                        // flashEffect(damageEffect, shellPos)
+                        createUnit(casterOwner, damageExpId, shellPos, shell.getFacingAngle())
+                            ..setScale(damageExpScale)
+                            ..kill()
+                        caster.damageTarget(victim, damage)
+                        victim.issueImmediateOrderById(STUN)
+
+                shell.kill()
+
+    function spawnUnits(
+        unit caster,
+        vec2 castPoint,
+        real damage,
+        real flyTime,
+        player casterOwner,
+        int times
+    )
+        let spawnAngleOffset = GetRandomReal(-spawnAngleRnd, spawnAngleRnd)
+        let dummyFacing = angleBetween(caster, castPoint) + spawnAngleOffset
+        let spawnPos = getPosToward(caster, 100, dummyFacing)
+
+        let dummy = createUnit(casterOwner, dummyId, spawnPos, dummyFacing)
+        shellFly(dummy, damage, flyTime, casterOwner, caster)
+
+        if times > 0
+            spawnUnits(caster, castPoint, damage, flyTime, casterOwner, times - 1)
+
+    function cast(unit caster, vec2 castPoint)
+        let flyTime = distance / speed * interval
+        let spellLvl = caster.getAbilityLevel(Rukia_Q.spell.id)
+        let damage = spellLvl * 20. + spellLvl * caster.getInt(true) / 5
+        let prober = getNearestEnemy(castPoint, caster.getOwner(), 100)
+
+        let isUnderBuff = prober == null ? false : Rukia_E_ALT.affectedUnits.contains(prober)
+
+        let times = GetRandomInt(
+            spawnMin,
+            isUnderBuff ? spawnMax * 2 : spawnMax
+        )
+
+        if isUnderBuff
+            doubleCastSound.play()
+        else
+            castSound.play()
+
+        caster.setTimeScale(2)
+        doPeriodicallyTimed(0.01, 0.05) cb ->
+            caster.setAnimation(11)
+            caster.issueImmediateOrder("stop")
+            if cb.isLast()
+                doPeriodicallyTimed(0.01, 0.2) cb ->
+                    caster.issueImmediateOrder("stop")
+                    if cb.isLast()
+                        caster.setTimeScale(1)
+                        spawnUnits(caster, castPoint, damage, flyTime, caster.getOwner(), times)

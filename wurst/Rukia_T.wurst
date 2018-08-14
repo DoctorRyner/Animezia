@@ -1,0 +1,93 @@
+package Rukia_T
+
+import ClosureForGroups
+import ClosureTimers
+import RegisterEvents
+import Rukia_R
+import Fast
+
+let id = 'D005'
+let bankaiId = 'e009'
+let castSound = gg_snd_Rukia_T_01
+let dmgCasterDivision = 3
+let spellDuration = 8.5
+let afterSpellStunDuration = 6.
+let dustWaveSfx = "DustWave.mdx"
+let sfx1 = "DevilSlam.mdx"
+let sfx2 = "IceExp.mdx"
+let sfx3Aura = "RukiaAura.mdx"
+let iceExpId = 'e00A'
+let damageBurstEffectName = "Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl"
+let stunEffectName = "Abilities\\Spells\\Undead\\FreezingBreath\\FreezingBreathTargetArt.mdl"
+
+let damageRange = 1000.
+
+function cast(unit caster)
+    let damage = 0.2 * caster.getAbilityLevel(id) * caster.getInt(true)
+    let casterOwner = caster.getOwner()
+    castSound.play()
+    caster.removeAbility(Rukia_R.spell.disableId)
+    flashEffect(dustWaveSfx, caster.getPos())
+
+    doPeriodicallyTimed(0.01, 0.3) cb ->
+        let casterPos = caster.getPos()
+        let casterFacing = caster.getFacingAngle()
+        caster.issueImmediateOrderById(STUN)
+
+        if cb.isLast()
+            let bankai = createUnit(casterOwner, bankaiId, casterPos, casterFacing)
+            caster.setVertexColor(colorA(0, 0, 0, 0))
+            flashEffect(sfx1, casterPos)
+
+            doPeriodicallyTimed(0.01, spellDuration + 2.3) cb ->
+                if caster.isAlive()
+                    caster.issueImmediateOrderById(STUN)
+                    if caster.getPos() != casterPos
+                        // caster.setPos(casterPos)
+                        // caster.setFacing(casterFacing)
+                else
+                    bankai.remove()
+                    caster.setVertexColor(colorA(255, 255, 255, 1000))
+                    cb.stop()
+
+            doAfter(1.2) ->
+                if caster.isAlive()
+                    flashEffect(sfx2, casterPos)
+                    let sfx3AuraEffect = bankai.addEffect(sfx3Aura, "origin")
+                    
+                    doPeriodicallyTimed(0.33, spellDuration - 1) cb ->
+                        if caster.isAlive()
+                            let tmp = createUnit(casterOwner, iceExpId, casterPos, casterFacing)
+                            doAfter(2, () -> tmp.kill())
+                            forUnitsInRange(casterPos, damageRange) victim ->
+                                if victim.isAlive()
+                                    if victim != caster
+                                        flashEffect(damageBurstEffectName, victim.getPos())
+                                        caster.damageTarget(victim, damage)
+                                        victim.issueImmediateOrderById(STUN)
+                                    else
+                                        caster.damageTarget(caster, damage / dmgCasterDivision)
+                        else
+                            cb.stop()
+                        if cb.isLast()
+                            forUnitsInRange(casterPos, damageRange) victim ->
+                                if victim.isAlive() and IsUnitEnemy(victim, casterOwner)
+                                    stunWithEffect(victim, afterSpellStunDuration, stunEffectName, "origin")
+                            doAfter(1.5) ->
+                                sfx3AuraEffect.destr()
+                                flashEffect(dustWaveSfx, casterPos)
+                                flashEffect(sfx1, casterPos)
+                                doAfter(0.05) ->
+                                    bankai.remove()
+                                    caster.setVertexColor(colorA(255, 255, 255, 1000))
+
+                else
+                    bankai.remove()
+                    caster.setVertexColor(colorA(255, 255, 255, 1000))
+
+init
+    registerSpellEffectEvent(id) ->
+        let caster = GetTriggerUnit()
+
+        if caster.hasAbility(Rukia_R.spell.disableId)
+            cast(caster)

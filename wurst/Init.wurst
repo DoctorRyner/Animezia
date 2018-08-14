@@ -1,0 +1,174 @@
+package Init
+
+import ClosureTimers
+import RegisterEvents
+import Fast
+
+let spawnPos1 = getRectPos(gg_rct_spawn1)
+let spawnPos2 = getRectPos(gg_rct_spawn2)
+
+let pos1 = getRectPos(gg_rct_pos1)
+let pos2 = getRectPos(gg_rct_pos2)
+
+function animPlayerBody(unit u, int animIndex)
+    PauseUnit(u, true)
+    u.setAnimation(animIndex)
+    print(animIndex)
+
+    doAfter(1.5) ->
+        animPlayerBody(u, animIndex + 1)
+
+function animPlayer(unit u)
+    animPlayerBody(u, 0)
+
+unit hero1
+unit hero2
+
+function setLevels(int level)
+    hero1.setLevel(level, false)
+    hero2.setLevel(level, false)
+
+var adder = 2
+
+var shouldRegen = true
+
+let p1 = Player(0)
+let p2 = Player(5)
+
+init
+    shouldRegen = false
+    let startGold = 999999
+
+    let heroId = 'H501'
+    hero1 = createUnit(p1, heroId, spawnPos1, 0)
+    hero2 = createUnit(p2, heroId, spawnPos2, 0)
+    hero1.setLevel(35, false)
+    hero2.setLevel(35, false)
+    hero1.setInvulnerable(true)
+    hero2.setInvulnerable(true)
+
+    p1.setGold(startGold)
+    p2.setGold(startGold)
+
+    p1.select(hero1)
+    p2.select(hero2)
+    SetCameraPositionForPlayer(p1, hero1.getX(), hero1.getY())
+    SetCameraPositionForPlayer(p2, hero2.getX(), hero2.getY())
+    SetCameraField(CAMERA_FIELD_TARGET_DISTANCE, 2400, 0)
+
+    SetTimeOfDay(6)
+    doPeriodically(120) cb ->
+        SetTimeOfDay(6)
+
+    doPeriodically(1) cb ->
+        SetCameraField(CAMERA_FIELD_TARGET_DISTANCE, 2400, 0)
+    
+    doPeriodically(0.05) cb ->
+        if shouldRegen
+            hero1.setHP(hero1.getMaxHP())
+            hero1.setMana(0)
+            hero2.setHP(hero2.getMaxHP())
+            hero2.setMana(0)
+            hero1.setInvulnerable(true)
+            hero2.setInvulnerable(true)
+
+    doPeriodicallyCounted(1, 10) cb ->
+        DisplayTimedTextToPlayer(localPlayer, 0., 0., 1, cb.getCount().toString())
+
+        if cb.isLast()
+            shouldRegen = false
+            hero1.setPos(pos1)
+            hero2.setPos(pos2)
+            SetCameraPositionForPlayer(p1, hero1.getX(), hero1.getY())
+            SetCameraPositionForPlayer(p2, hero2.getX(), hero2.getY())
+            // hero1.setHP(hero1.getMaxHP())
+            hero1.setHP(hero1.getMaxHP() * 12 / 100)
+            hero1.setMana(hero1.getMaxMana())
+            hero2.setHP(hero2.getMaxHP())
+            hero2.setMana(hero2.getMaxMana())
+            hero1.setInvulnerable(false)
+            hero2.setInvulnerable(false)
+            p1.select(hero1)
+            p2.select(hero2)
+        else
+            hero1.setHP(hero1.getMaxHP())
+            hero1.setMana(0)
+            hero2.setHP(hero2.getMaxHP())
+            hero2.setMana(0)
+            hero1.setInvulnerable(true)
+            hero2.setInvulnerable(true)
+        
+
+    registerPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH) ->
+        let dyingUnit = GetTriggerUnit()
+        if not dyingUnit.isType(UNIT_TYPE_HERO)
+            doAfter(3, () -> dyingUnit.remove())
+        else
+            shouldRegen = true
+            p1.select(hero1)
+            p2.select(hero2)
+            let level = dyingUnit.getLevel()
+
+            setLevels(level + adder)
+            adder = adder == 2 ? 3 : 2
+
+            hero1.setInvulnerable(true)
+            hero1.setInvulnerable(false)
+            p1.setGold(p1.getGold() + 1000)
+            p2.setGold(p2.getGold() + 1000)
+            if not hero1.isAlive()
+                p2.setGold(p2.getGold() + 250)
+                hero1.revive(spawnPos1, false)
+                DisplayTimedTextToPlayer(
+                    localPlayer,
+                    0.,
+                    0.,
+                    4,
+                    p2.getName() + " убил игрока " + p1.getName()
+                )
+            if not hero2.isAlive()
+                p1.setGold(p1.getGold() + 250)
+                hero2.revive(spawnPos2, false)
+                DisplayTimedTextToPlayer(
+                    localPlayer,
+                    0.,
+                    0.,
+                    4,
+                    p1.getName() + " убил игрока " + p2.getName()
+                )
+
+            hero1.setPos(spawnPos1)
+            SetCameraPositionForPlayer(p1, hero1.getX(), hero1.getY())
+            hero2.setPos(spawnPos2)
+            SetCameraPositionForPlayer(p2, hero2.getX(), hero2.getY())
+            hero1.setInvulnerable(true)
+            hero1.setInvulnerable(true)
+
+            hero1.setHP(hero1.getMaxHP())
+            hero1.setMana(0)
+            hero2.setHP(hero2.getMaxHP())
+            hero2.setMana(0)
+
+            doPeriodicallyCounted(1, 10) cb ->
+                DisplayTimedTextToPlayer(localPlayer, 0., 0., 1, cb.getCount().toString())
+
+                if cb.isLast()
+                    UnitResetCooldown(hero1)
+                    UnitResetCooldown(hero2)
+                    shouldRegen = false
+                    hero1.setPos(pos1)
+                    hero2.setPos(pos2)
+                    SetCameraPositionForPlayer(p1, hero1.getX(), hero1.getY())
+                    SetCameraPositionForPlayer(p2, hero2.getX(), hero2.getY())
+                    hero1.setHP(hero1.getMaxHP())
+                    hero1.setMana(hero1.getMaxMana())
+                    hero2.setHP(hero2.getMaxHP())
+                    hero2.setMana(hero2.getMaxMana())
+                    hero1.setInvulnerable(false)
+                    hero2.setInvulnerable(false)
+
+            
+
+
+    
+

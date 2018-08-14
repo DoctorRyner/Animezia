@@ -1,0 +1,88 @@
+package Rukia_W
+
+import ClosureTimers
+import ClosureForGroups
+import RegisterEvents
+import Fast
+import Rukia_R
+import initlater Rukia_W_ALT
+import Rukia_Q
+import Rukia_W_THIRD_DANCE
+
+class Rukia_W
+    static let id = 'D002'    
+
+let dummyId = 'h003'
+let slowDownSpellId = 'D006'
+let distance = 2600.
+let radius = 105.
+let expRadius = 380.
+let speed = 150.
+let slowDownDuration = 4.
+let slowDownEffectName = "Chirodri.mdx"
+let castSound = gg_snd_Rukia_W_01
+let interval = 0.025
+let expDummyScale = 1.4
+
+function damage(unit caster, unit victim, group damagedUnits, real damage)
+    damagedUnits.addUnit(victim)
+    let slowDownEffect = victim.addEffect(slowDownEffectName, "chest")
+
+    caster.damageTarget(victim, damage)
+    victim.addAbility(slowDownSpellId)
+    SetPlayerAbilityAvailable(victim.getOwner(), slowDownSpellId, false)
+
+    doAfter(slowDownDuration) ->
+        victim.removeAbility(slowDownSpellId)
+        doAfter(2, () -> slowDownEffect.destr())
+
+function cast(unit caster, vec2 castPoint)
+    let casterOwner = caster.getOwner()
+    let damagedUnits = CreateGroup()
+    let damage = 0.5 * caster.getInt(true) + caster.getAbilityLevel(Rukia_W.id) * 30
+    let spellFaceAngle = angleBetween(caster, castPoint)
+    let dummy = createUnit(casterOwner, dummyId, getPosToward(caster, 80, spellFaceAngle), spellFaceAngle)
+
+    castSound.play()
+    doPeriodicallyTimed(interval, distance / speed * interval) cb ->
+        moveForward(dummy, speed)
+        let dummyPos = dummy.getPos()
+
+        forUnitsInRange(dummyPos, radius) victim ->
+            if victim.getTypeId() == Rukia_Q.spell.sokatsuiId
+                victim.kill()
+                cb.stop()
+            if victim.isAlive() and IsUnitEnemy(victim, casterOwner) and not damagedUnits.contains(victim)
+                damage(caster, victim, damagedUnits, damage)
+
+        if cb.isLast()
+            forUnitsInRange(dummyPos, expRadius) victim ->
+                if victim.isAlive() and IsUnitEnemy(victim, casterOwner) and not damagedUnits.contains(victim)
+                    damage(caster, victim, damagedUnits, damage)
+                    
+            dummy.setScale(expDummyScale)
+            dummy.kill()
+            damagedUnits.destr()
+
+init
+    registerSpellEffectEvent(Rukia_W.id) ->
+        let caster = GetTriggerUnit()
+        let castPoint = getSpellTargetPos()
+
+        if not caster.hasAbility(Rukia_R.spell.disableId)
+            cast(caster, castPoint)
+        else
+            if caster.getHP() > caster.getMaxHP() * Rukia_W_THIRD_DANCE.spell.minHpPercent / 100
+                Rukia_W_ALT.spell.cast(caster, castPoint)
+            else
+                let nearestEnemy = getNearestEnemy(
+                    getPosForward(caster, Rukia_W_THIRD_DANCE.spell.castDistance),
+                    caster.getOwner(),
+                    Rukia_W_THIRD_DANCE.spell.castRange
+                )
+
+                if nearestEnemy != null
+                    Rukia_W_THIRD_DANCE.spell.cast(caster, nearestEnemy)
+                else
+                    Rukia_W_ALT.spell.cast(caster, castPoint)
+

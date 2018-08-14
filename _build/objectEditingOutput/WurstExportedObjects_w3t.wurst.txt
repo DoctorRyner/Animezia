@@ -1,0 +1,69 @@
+package WurstExportedObjects_w3t
+import ObjEditingNatives
+
+// Modified Table (contains all custom objects)
+
+@compiletime function create_w3t_I000()
+	let def = createObjectDefinition("w3t", 'I000', 'bspd')
+	..setInt("istr", 0)
+	..setInt("isto", 99999)
+	..setInt("igol", 1000)
+	..setString("iabi", "D604,D600")
+	..setString("unam", "Сапоги 100")
+	..setString("utub", "Повышение скорости перемещения героя на 100")
+	..setString("utip", "Сапог")
+
+
+@compiletime function create_w3t_I001()
+	let def = createObjectDefinition("w3t", 'I001', 'bspd')
+	..setInt("istr", 0)
+	..setInt("isto", 99999)
+	..setInt("igol", 4000)
+	..setString("iabi", "D604,D601")
+	..setString("unam", "Сапоги 200")
+	..setString("utub", "Повышение скорости перемещения героя на 200")
+	..setString("utip", "Мега спог")
+
+
+@compiletime function create_w3t_I002()
+	let def = createObjectDefinition("w3t", 'I002', 'bspd')
+	..setInt("istr", 0)
+	..setInt("isto", 99999)
+	..setInt("igol", 6000)
+	..setString("iabi", "D604,D602")
+	..setString("unam", "Сапоги 300")
+	..setString("utub", "Повышение скорости перемещения героя на 300")
+	..setString("utip", "Мега убир сапог")
+
+
+@compiletime function create_w3t_I003()
+	let def = createObjectDefinition("w3t", 'I003', 'mcou')
+	..setInt("isto", 2)
+	..setString("iabi", "D603")
+	..setInt("igol", 900)
+	..setInt("istr", 0)
+	..setString("utub", "Повышение характеристик на 18 едениц")
+
+
+@compiletime function create_w3t_I004()
+	let def = createObjectDefinition("w3t", 'I004', 'mcou')
+	..setInt("isto", 2)
+	..setString("iabi", "D505")
+	..setString("unam", "Супер Медаль Храбрости")
+	..setInt("istr", 0)
+	..setInt("igol", 5000)
+	..setString("utip", "Супер Медаль Храбрости")
+	..setString("utub", "Повышение характеристик героя на 36 ед")
+
+
+@compiletime function create_w3t_I005()
+	let def = createObjectDefinition("w3t", 'I005', 'soul')
+	..setString("unam", "Хп бустааааар")
+	..setString("iabi", "E605")
+	..setInt("igol", 3000)
+
+
+// Original Table (contains all modified default objects)
+// Wurst does not support modifying default objects
+// but you can copy these functions and replace 'xxxx' with a new, custom id.
+

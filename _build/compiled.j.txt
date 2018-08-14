@@ -1,0 +1,3752 @@
+// this script was compiled with wurst 1.8.0.0-jenkins-Wurst-913
+globals
+rect w=null
+rect u=null
+rect r=null
+rect s=null
+sound t=null
+sound i=null
+sound S=null
+sound c=null
+sound o=null
+sound O=null
+sound l=null
+sound b=null
+sound y=null
+sound p=null
+sound e=null
+sound q=null
+sound a=null
+group n=null
+integer array d
+integer f=0
+filterfunc R=null
+integer T=0
+integer array Y
+timer array G
+timer array g
+timer array h
+string array F
+integer k=0
+hashtable j=null
+unit array x
+real array v
+real array m
+unit array Q
+real array W
+real array E
+effect array Z
+unit array U
+unit array I
+effect array P
+unit array A
+effect array D
+real array H
+unit array J
+boolean array K
+timer L=null
+real X=0.
+group C=null
+group V=null
+hashtable B=null
+hashtable N=null
+integer array M
+integer array ww
+real uw=0.
+real rw=0.
+real sw=0.
+real tw=0.
+real iw=0.
+real Sw=0.
+real cw=0.
+real ow=0.
+unit array Ow
+integer array lw
+unit bw=null
+unit yw=null
+integer pw=0
+boolean ew=false
+player qw=null
+player aw=null
+unit array nw
+player array dw
+player fw=null
+trigger array Rw
+integer Tw=0
+sound Yw=null
+unit array Gw
+player array gw
+unit array hw
+real array Fw
+real array kw
+integer array jw
+unit array xw
+unit array vw
+player array mw
+unit array Qw
+real array Ww
+real array Ew
+group Zw=null
+integer Uw=0
+unit array Iw
+unit array Pw
+unit array Aw
+player array Dw
+unit array Hw
+real array Jw
+unit array Kw
+unit array Lw
+player array Xw
+real array Cw
+real array Vw
+unit array Bw
+real array Nw
+unit array Mw
+player array wu
+unit array uu
+real array ru
+unit array su
+unit array tu
+sound array iu
+sound array Su
+group cu=null
+unit array ou
+real array Ou
+real array lu
+unit array bu
+real array yu
+real array pu
+integer eu=0
+player array qu
+unit array au
+player array nu
+integer array du
+player array fu
+real array Ru
+real array Tu
+unit array Yu
+unit array Gu
+real array gu
+unit array hu
+player array Fu
+group array ku
+unit array ju
+real array xu
+unit array vu
+integer array mu
+real array Qu
+real array Wu
+real array Eu
+real array Zu
+integer array Uu
+unit array Iu
+integer array Pu
+real array Au
+real array Du
+real array Hu
+real array Ju
+integer array Ku
+sound array Lu
+sound array Xu
+integer Cu=0
+player array Vu
+integer array Bu
+player array Nu
+unit array Mu
+real array wr
+unit array ur
+player array rr
+unit array sr
+real array tr
+sound array ir
+sound array Sr
+integer cr=0
+unit array lr
+real array br
+unit array yr
+effect array pr
+sound array er
+sound qr=null
+unit array ar
+unit array nr
+unit array dr
+unit array fr
+real array Rr
+player array Tr
+unit array Yr
+unit array Gr
+effect array gr
+real array hr
+real array Fr
+unit array kr
+unit array jr
+unit array xr
+player array vr
+real array mr
+real array Qr
+real array Wr
+real array Er
+effect array Zr
+unit array Ur
+unit array Ir
+real array Pr
+real array Ar
+unit array Dr
+player array Hr
+real array Jr
+real array Kr
+unit array Lr
+player array Xr
+real array Cr
+sound Vr=null
+effect array Br
+unit array Nr
+effect array Mr
+integer array ws
+player array us
+group array rs
+unit array ss
+real array ts
+player array is
+group array Ss
+unit array cs
+real array os
+unit array Os
+player array ls
+group array bs
+unit array ys
+real array ps
+integer es=0
+unit array qs
+unit array as
+group array ns
+player array ds
+group array fs
+unit array Rs
+player array Ts
+group array Ys
+group array Gs
+group array gs
+unit array hs
+real array Fs
+group array ks
+integer array js
+unit array xs
+group array vs
+real array ms
+group array Qs
+unit array Ws
+integer array Es
+unit array Zs
+group array Us
+real array Is
+group array Ps
+sound array As
+sound array Ds
+integer Hs=0
+unit array Js
+unit array Ks
+unit array Ls
+effect array Xs
+real array Cs
+unit array Vs
+unit array Bs
+effect array Ns
+real array Ms
+sound array wt
+hashtable ut=null
+timer array rt
+integer st=0
+integer tt=0
+integer St=0
+integer array ct
+integer ot=0
+integer Ot=0
+integer array lt
+integer array bt
+integer yt=0
+integer pt=0
+integer array et
+integer array qt
+integer at=0
+integer nt=0
+integer array dt
+integer array ft
+integer Rt=0
+integer Tt=0
+integer array Yt
+integer array Gt
+integer gt=0
+integer ht=0
+integer array Ft
+integer array kt
+integer jt=0
+integer xt=0
+integer array vt
+integer mt=0
+integer Qt=0
+integer array Wt
+integer Et=0
+integer Zt=0
+integer array Ut
+integer It=0
+integer Pt=0
+integer array At
+integer Dt=0
+integer Ht=0
+integer array Jt
+integer Kt=0
+integer Lt=0
+real Xt=0.
+real Ct=0.
+real Vt=0.
+real Bt=0.
+code Nt=null
+code Mt=null
+code wi=null
+code ui=null
+code ri=null
+code si=null
+code ti=null
+code ii=null
+code Si=null
+code ci=null
+code oi=null
+code Oi=null
+code li=null
+code bi=null
+code yi=null
+code pi=null
+code ei=null
+code qi=null
+code ai=null
+code ni=null
+code di=null
+code fi=null
+code Ri=null
+code Ti=null
+code Yi=null
+code Gi=null
+code gi=null
+code hi=null
+code Fi=null
+code ki=null
+code ji=null
+code xi=null
+code vi=null
+code mi=null
+code Qi=null
+code Wi=null
+code Ei=null
+code Zi=null
+code Ui=null
+code Ii=null
+code Pi=null
+code Ai=null
+code Di=null
+code Hi=null
+code Ji=null
+code Ki=null
+code Li=null
+code Xi=null
+unit Ci=null
+timer Vi=null
+endglobals
+native UnitAlive takes unit id returns boolean
+function qb takes real lb,real bb,real yb,real pb returns real
+local real eb=Cos(yb)*pb
+set yb=Sin(yb)*pb
+set Vt=lb+eb
+set Bt=bb+yb
+return Vt
+endfunction
+function Kc takes unit Dc,real Hc,real Jc returns real
+set Xt=qb(GetUnitX(Dc),GetUnitY(Dc),Jc*0.017453293,Hc)
+set Ct=Bt
+return Xt
+endfunction
+function Lb takes integer Hb,integer Jb,integer Kb returns nothing
+call SaveInteger(ut,Hb,Jb,Kb)
+endfunction
+function Zc takes unit Qc,real Wc,real Ec returns real
+return 57.295779513*Atan2(Ec-GetUnitY(Qc),Wc-GetUnitX(Qc))
+endfunction
+function Ho takes integer Do returns string
+if Do==0 then
+return "|cffADADADtrace|r"
+elseif Do==1 then
+return "|cff2685DCdebug|r"
+elseif Do==2 then
+return "|cffFFCC00info|r"
+elseif Do==3 then
+return "|cffF47E3Ewarning|r"
+elseif Do==4 then
+return "|cffFB2700error|r"
+endif
+return "?"
+endfunction
+function kc takes string hc returns nothing
+local integer Fc=StringHash(hc)
+if HaveSavedInteger(j,-1,Fc) then
+if LoadInteger(j,-1,Fc)+60<X then
+set hc=hc+""
+call DisplayTimedTextToPlayer(fw,0.,0.,45.,Ho(4)+" - "+hc)
+call SaveInteger(j,-1,Fc,R2I(X))
+call SaveBoolean(j,-1,Fc,false)
+elseif HaveSavedBoolean(j,-1,Fc) then
+if not LoadBoolean(j,-1,Fc) then
+call DisplayTimedTextToPlayer(fw,0.,0.,45.,Ho(4)+" - "+"|cffFF3A29Excessive repeating errors are being omitted")
+call SaveBoolean(j,-1,Fc,true)
+endif
+else
+call DisplayTimedTextToPlayer(fw,0.,0.,45.,Ho(4)+" - "+"|cffFF3A29Excessive repeating errors are being omitted")
+call SaveBoolean(j,-1,Fc,true)
+endif
+else
+call SaveInteger(j,-1,Fc,R2I(X))
+set hc="|cffFF3A29Error:|r "+hc+""
+call DisplayTimedTextToPlayer(fw,0.,0.,45.,Ho(4)+" - "+hc)
+endif
+call I2S(1/0)
+endfunction
+function sb takes nothing returns timer
+local timer rb
+if st>0 then
+set st=st-1
+set rb=rt[st]
+call Lb(tt,GetHandleId(rb),0)
+set rb=null
+return rt[st]
+else
+set rb=CreateTimer()
+call Lb(tt,GetHandleId(rb),0)
+set Vi=rb
+set rb=null
+return Vi
+endif
+endfunction
+function Db takes integer vb,unit mb,real Qb,real Wb,boolean Eb returns nothing
+local integer Pb=GetUnitAbilityLevel(mb,1144008753)
+local real Zb=Pb*20.+Pb*GetHeroInt(mb,true)
+local player Ub=GetOwningPlayer(mb)
+local unit Ib
+local real Ab
+set Wb=Zc(mb,Qb,Wb)
+set Ab=Kc(mb,60.,Wb)
+set Qb=Ct
+set Ib=CreateUnit(Ub,1697656887,Ab,Qb,Wb)
+if Eb then
+call StartSound(ir[vb])
+endif
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set Pb=nt
+set dt[Pb]=15
+else
+call kc("Out of memory: Could not create Closure.")
+set Pb=0
+endif
+else
+set at=at-1
+set Pb=qt[at]
+set dt[Pb]=15
+endif
+set Y[Pb]=0
+set ur[Pb]=Ib
+set rr[Pb]=Ub
+set sr[Pb]=mb
+set tr[Pb]=Zb
+set vb=R2I(32.5)
+set G[Pb]=sb()
+call Lb(tt,GetHandleId(G[Pb]),Pb)
+set Y[Pb]=vb
+call TimerStart(G[Pb],0.025,true,Ei)
+set Ub=null
+set Ib=null
+endfunction
+function lo takes real uo,real ro,player so,real io returns unit
+local group co=CreateGroup()
+local group So
+local unit oo
+local unit Oo
+call GroupEnumUnitsInRange(co,uo,ro,io,null)
+set So=co
+set V=CreateGroup()
+call ForGroup(co,Zi)
+set co=V
+loop
+exitwhen FirstOfGroup(co)==null
+set Oo=FirstOfGroup(co)
+call GroupRemoveUnit(co,Oo)
+if (not UnitAlive(Oo))or IsUnitAlly(Oo,so) then
+call GroupRemoveUnit(So,Oo)
+endif
+endloop
+call GroupClear(co)
+call DestroyGroup(co)
+set oo=FirstOfGroup(So)
+set V=CreateGroup()
+call ForGroup(So,Zi)
+set So=V
+loop
+exitwhen FirstOfGroup(So)==null
+set Oo=FirstOfGroup(So)
+call GroupRemoveUnit(So,Oo)
+if SquareRoot((GetUnitX(Oo)-uo)*(GetUnitX(Oo)-uo)+(GetUnitY(Oo)-ro)*(GetUnitY(Oo)-ro))<SquareRoot((GetUnitX(oo)-uo)*(GetUnitX(oo)-uo)+(GetUnitY(oo)-ro)*(GetUnitY(oo)-ro)) then
+set oo=Oo
+endif
+endloop
+call GroupClear(So)
+call DestroyGroup(So)
+set Ci=oo
+set So=null
+set co=null
+set oo=null
+set Oo=null
+return Ci
+endfunction
+function WS takes integer vS,real mS,integer QS returns nothing
+set G[vS]=sb()
+call Lb(tt,GetHandleId(G[vS]),vS)
+set Y[vS]=QS
+call TimerStart(G[vS],mS,true,Ei)
+endfunction
+function xS takes real FS,real kS,integer jS returns integer
+call WS(jS,FS,R2I(kS/FS+0.5))
+return jS
+endfunction
+function AO takes nothing returns nothing
+local unit xO=GetTriggerUnit()
+local real IO=GetSpellTargetX()
+local real PO=GetSpellTargetY()
+local unit vO
+local integer mO
+local real QO
+local real WO
+local boolean EO
+local integer ZO
+local integer UO
+if GetUnitAbilityLevel(xO,1144008756)<=0 then
+set vO=lo(IO,PO,GetOwningPlayer(xO),100.)
+if vO==null then
+set EO=true
+else
+set EO=not IsUnitInGroup(vO,cu)
+endif
+if EO then
+call Db(Cu,xO,IO,PO,true)
+else
+call StartSound(Sr[Cu])
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set mO=nt
+set dt[mO]=13
+else
+call kc("Out of memory: Could not create Closure.")
+set mO=0
+endif
+else
+set at=at-1
+set mO=qt[at]
+set dt[mO]=13
+endif
+set Y[mO]=0
+set bu[mO]=xO
+set yu[mO]=IO
+set pu[mO]=PO
+call xS(0.01,0.05,mO)
+endif
+else
+set mO=eu
+set QO=4500/15.*0.025
+set ZO=GetUnitAbilityLevel(xO,1144008753)
+set WO=ZO*20.+ZO*GetHeroInt(xO,true)*1./5
+set vO=lo(IO,PO,GetOwningPlayer(xO),100.)
+if vO==null then
+set EO=false
+else
+set EO=IsUnitInGroup(vO,Zw)
+endif
+if EO then
+set ZO=20
+else
+set ZO=10
+endif
+set ZO=GetRandomInt(1,ZO)
+if EO then
+call StartSound(Xu[mO])
+else
+call StartSound(Lu[mO])
+endif
+call SetUnitTimeScale(xO,2.)
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set UO=nt
+set dt[UO]=17
+else
+call kc("Out of memory: Could not create Closure.")
+set UO=0
+endif
+else
+set at=at-1
+set UO=qt[at]
+set dt[UO]=17
+endif
+set Y[UO]=0
+set Iu[UO]=xO
+set Pu[UO]=mO
+set Au[UO]=IO
+set Du[UO]=PO
+set Hu[UO]=WO
+set Ju[UO]=QO
+set Ku[UO]=ZO
+call xS(0.01,0.05,UO)
+endif
+set xO=null
+set vO=null
+endfunction
+function Ao takes nothing returns boolean
+return true
+endfunction
+function Cl takes nothing returns boolean
+return true
+endfunction
+function Eo takes nothing returns boolean
+return true
+endfunction
+function FO takes nothing returns boolean
+local integer hO
+set Zw=CreateGroup()
+if jt==0 then
+if xt<32768 then
+set xt=xt+1
+set hO=xt
+else
+call kc("Out of memory: Could not create Spell.")
+set hO=0
+endif
+else
+set jt=jt-1
+set hO=kt[jt]
+endif
+set iu[hO]=c
+set Su[hO]=q
+set Uw=hO
+return true
+endfunction
+function HO takes nothing returns boolean
+local integer DO
+if mt==0 then
+if Qt<32768 then
+set Qt=Qt+1
+set DO=Qt
+else
+call kc("Out of memory: Could not create Spell.")
+set DO=0
+endif
+else
+set mt=mt-1
+set DO=vt[mt]
+endif
+set Lu[DO]=p
+set Xu[DO]=a
+set eu=DO
+return true
+endfunction
+function Hl takes nothing returns nothing
+local unit xl=GetTriggerUnit()
+local real Al=GetSpellTargetX()
+local real Dl=GetSpellTargetY()
+local player vl
+local group ml
+local real Ql
+local unit Wl
+local integer El
+local effect Zl
+local integer Ul
+local group Il
+local real Pl
+if GetUnitAbilityLevel(xl,1144008756)<=0 then
+set vl=GetOwningPlayer(xl)
+set Il=CreateGroup()
+set Ql=0.5*GetHeroInt(xl,true)+GetUnitAbilityLevel(xl,1144008754)*30
+set Dl=Zc(xl,Al,Dl)
+set Pl=Kc(xl,80.,Dl)
+set Al=Ct
+set Wl=CreateUnit(vl,1747988531,Pl,Al,Dl)
+call StartSound(Vr)
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set Ul=nt
+set dt[Ul]=22
+else
+call kc("Out of memory: Could not create Closure.")
+set Ul=0
+endif
+else
+set at=at-1
+set Ul=qt[at]
+set dt[Ul]=22
+endif
+set Y[Ul]=0
+set Os[Ul]=Wl
+set ls[Ul]=vl
+set bs[Ul]=Il
+set ys[Ul]=xl
+set ps[Ul]=Ql
+call xS(0.025,0.433333367,Ul)
+elseif GetUnitState(xl,UNIT_STATE_LIFE)>GetUnitState(xl,UNIT_STATE_MAX_LIFE)*20/100. then
+set Ul=es
+set Il=CreateGroup()
+set ml=CreateGroup()
+set vl=GetOwningPlayer(xl)
+set Ql=0.5*GetHeroInt(xl,true)+GetUnitAbilityLevel(xl,1144008754)*30
+set Pl=Zc(xl,Al,Dl)
+set Al=Kc(xl,60.,Pl)
+set Dl=Ct
+set Wl=CreateUnit(vl,1697656883,Al,Dl,Pl)
+call StartSound(As[Ul])
+call SetUnitTimeScale(xl,1.5)
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set El=nt
+set dt[El]=23
+else
+call kc("Out of memory: Could not create Closure.")
+set El=0
+endif
+else
+set at=at-1
+set El=qt[at]
+set dt[El]=23
+endif
+set Y[El]=0
+set qs[El]=xl
+call xS(0.01,0.05,El)
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set El=nt
+set dt[El]=24
+else
+call kc("Out of memory: Could not create Closure.")
+set El=0
+endif
+else
+set at=at-1
+set El=qt[at]
+set dt[El]=24
+endif
+set Y[El]=0
+set as[El]=xl
+set ns[El]=ml
+call xS(0.01,1.015384674,El)
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set El=nt
+set dt[El]=25
+else
+call kc("Out of memory: Could not create Closure.")
+set El=0
+endif
+else
+set at=at-1
+set El=qt[at]
+set dt[El]=25
+endif
+set Y[El]=0
+set Rs[El]=Wl
+set Ts[El]=vl
+set Ys[El]=Il
+set Gs[El]=ml
+call xS(0.1,0.615384638,El)
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set El=nt
+set dt[El]=26
+else
+call kc("Out of memory: Could not create Closure.")
+set El=0
+endif
+else
+set at=at-1
+set El=qt[at]
+set dt[El]=26
+endif
+set Y[El]=0
+set Ws[El]=Wl
+set Es[El]=Ul
+set Zs[El]=xl
+set Us[El]=ml
+set Is[El]=Ql
+set Ps[El]=Il
+call xS(0.025,0.615384638,El)
+else
+set Pl=GetUnitX(xl)
+set Ql=GetUnitY(xl)
+set Pl=qb(Pl,Ql,GetUnitFacing(xl)*0.017453293,150.)
+set Ql=Bt
+set Wl=lo(Pl,Ql,GetOwningPlayer(xl),150.)
+if Wl!=null then
+set Ul=Hs
+set Al=GetHeroInt(xl,true)+(GetUnitState(xl,UNIT_STATE_MAX_LIFE)-GetUnitState(xl,UNIT_STATE_LIFE))/2.
+set Zl=AddSpecialEffectTarget("Abilities\\Spells\\Undead\\FreezingBreath\\FreezingBreathTargetArt.mdl",Wl,"origin")
+call StartSound(wt[Ul])
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set El=nt
+set dt[El]=27
+else
+call kc("Out of memory: Could not create Closure.")
+set El=0
+endif
+else
+set at=at-1
+set El=qt[at]
+set dt[El]=27
+endif
+set Y[El]=0
+set Vs[El]=xl
+set Bs[El]=Wl
+set Ns[El]=Zl
+set Ms[El]=Al
+call xS(0.01,3.2,El)
+else
+set Ul=es
+set Il=CreateGroup()
+set ml=CreateGroup()
+set vl=GetOwningPlayer(xl)
+set Ql=0.5*GetHeroInt(xl,true)+GetUnitAbilityLevel(xl,1144008754)*30
+set Pl=Zc(xl,Al,Dl)
+set Al=Kc(xl,60.,Pl)
+set Dl=Ct
+set Wl=CreateUnit(vl,1697656883,Al,Dl,Pl)
+call StartSound(As[Ul])
+call SetUnitTimeScale(xl,1.5)
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set El=nt
+set dt[El]=23
+else
+call kc("Out of memory: Could not create Closure.")
+set El=0
+endif
+else
+set at=at-1
+set El=qt[at]
+set dt[El]=23
+endif
+set Y[El]=0
+set qs[El]=xl
+call xS(0.01,0.05,El)
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set El=nt
+set dt[El]=24
+else
+call kc("Out of memory: Could not create Closure.")
+set El=0
+endif
+else
+set at=at-1
+set El=qt[at]
+set dt[El]=24
+endif
+set Y[El]=0
+set as[El]=xl
+set ns[El]=ml
+call xS(0.01,1.015384674,El)
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set El=nt
+set dt[El]=25
+else
+call kc("Out of memory: Could not create Closure.")
+set El=0
+endif
+else
+set at=at-1
+set El=qt[at]
+set dt[El]=25
+endif
+set Y[El]=0
+set Rs[El]=Wl
+set Ts[El]=vl
+set Ys[El]=Il
+set Gs[El]=ml
+call xS(0.1,0.615384638,El)
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set El=nt
+set dt[El]=26
+else
+call kc("Out of memory: Could not create Closure.")
+set El=0
+endif
+else
+set at=at-1
+set El=qt[at]
+set dt[El]=26
+endif
+set Y[El]=0
+set Ws[El]=Wl
+set Es[El]=Ul
+set Zs[El]=xl
+set Us[El]=ml
+set Is[El]=Ql
+set Ps[El]=Il
+call xS(0.025,0.615384638,El)
+endif
+endif
+set xl=null
+set vl=null
+set ml=null
+set Wl=null
+set Zl=null
+set Il=null
+endfunction
+function Io takes nothing returns boolean
+local integer Zo
+local integer Uo
+set fw=GetLocalPlayer()
+set Zo=0
+set Uo=bj_MAX_PLAYER_SLOTS-1
+loop
+exitwhen Zo>Uo
+set dw[Zo]=Player(Zo)
+set Zo=Zo+1
+endloop
+return true
+endfunction
+function Jo takes nothing returns boolean
+return true
+endfunction
+function Kl takes nothing returns boolean
+local integer Jl
+if Dt==0 then
+if Ht<32768 then
+set Ht=Ht+1
+set Jl=Ht
+else
+call kc("Out of memory: Could not create Spell.")
+set Jl=0
+endif
+else
+set Dt=Dt-1
+set Jl=At[Dt]
+endif
+set As[Jl]=o
+set Ds[Jl]=O
+set es=Jl
+return true
+endfunction
+function tO takes playerunitevent Xo,code Co returns nothing
+local playerunitevent Vo=Xo
+local code Bo=null
+local code No=null
+local integer Mo=GetHandleId(Xo)
+local integer wO
+local filterfunc uO
+local trigger rO
+local player sO
+if Rw[Mo]==null then
+set Rw[Mo]=CreateTrigger()
+set wO=bj_MAX_PLAYER_SLOTS-1
+loop
+exitwhen wO<0
+set rO=Rw[Mo]
+set sO=dw[wO]
+if Bo!=null then
+set uO=Filter(Bo)
+else
+set uO=null
+endif
+call TriggerRegisterPlayerUnitEvent(rO,sO,Vo,uO)
+set wO=wO-1
+endloop
+endif
+if Co!=null then
+call TriggerAddCondition(Rw[Mo],Filter(Co))
+endif
+if No!=null then
+call TriggerAddAction(Rw[Mo],No)
+endif
+set Vo=null
+set uO=null
+set rO=null
+set sO=null
+endfunction
+function Lo takes nothing returns boolean
+local integer Ko
+if gt==0 then
+if ht<32768 then
+set ht=ht+1
+set Ko=ht
+set Ft[Ko]=92
+else
+call kc("Out of memory: Could not create HashMap.")
+set Ko=0
+endif
+else
+set gt=gt-1
+set Ko=Gt[gt]
+set Ft[Ko]=92
+endif
+set Tw=Ko
+call tO(EVENT_PLAYER_UNIT_SPELL_EFFECT,Ai)
+return true
+endfunction
+function Nl takes nothing returns integer
+local integer Bl
+if gt==0 then
+if ht<32768 then
+set ht=ht+1
+set Bl=ht
+set Ft[Bl]=91
+else
+call kc("Out of memory: Could not create Table.")
+set Bl=0
+endif
+else
+set gt=gt-1
+set Bl=Gt[gt]
+set Ft[Bl]=91
+endif
+return Bl
+endfunction
+function Ml takes nothing returns boolean
+set tt=Nl()
+call CreateTimer()
+call CreateTrigger()
+return true
+endfunction
+function Ob takes nothing returns boolean
+call Location(0.,0.)
+return true
+endfunction
+function Po takes nothing returns boolean
+return true
+endfunction
+function Qo takes nothing returns boolean
+return true
+endfunction
+function Gc takes string Rc,real Tc,real Yc returns nothing
+call DestroyEffect(AddSpecialEffect(Rc,Tc,Yc))
+endfunction
+function Rl takes nothing returns nothing
+local unit al=GetTriggerUnit()
+local real nl
+local player dl
+local integer fl
+if GetUnitAbilityLevel(al,1144008756)>0 then
+set nl=0.2*GetUnitAbilityLevel(al,1144008757)*GetHeroInt(al,true)
+set dl=GetOwningPlayer(al)
+call StartSound(qr)
+call UnitRemoveAbility(al,1144008756)
+call Gc("DustWave.mdx",GetUnitX(al),GetUnitY(al))
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set fl=nt
+set dt[fl]=19
+else
+call kc("Out of memory: Could not create Closure.")
+set fl=0
+endif
+else
+set at=at-1
+set fl=qt[at]
+set dt[fl]=19
+endif
+set Y[fl]=0
+set Lr[fl]=al
+set Xr[fl]=dl
+set Cr[fl]=nl
+call xS(0.01,0.3,fl)
+endif
+set al=null
+set dl=null
+endfunction
+function ob takes integer cb returns trigger
+call SaveFogStateHandle(ut,St,0,ConvertFogState(cb))
+set cb=St
+return LoadTriggerHandle(ut,cb,0)
+endfunction
+function SO takes nothing returns boolean
+local integer iO=Tw
+set iO=LoadInteger(ut,iO,GetSpellAbilityId())
+return TriggerEvaluate(ob(iO))
+endfunction
+function Sb takes nothing returns boolean
+set St=Nl()
+call SaveStr(ut,St,0,"")
+return true
+endfunction
+function yO takes integer cO,code oO returns nothing
+local integer OO=Tw
+local boolean bO=HaveSavedInteger(ut,OO,cO)
+local integer lO
+if not bO then
+set OO=Tw
+set lO=GetHandleId(CreateTrigger())
+if Ft[OO]<=92 then
+call Lb(OO,cO,lO)
+else
+call Lb(OO,cO,lO)
+set lO=ww[OO]
+set bO=LoadInteger(N,lO,cO)>0
+if not bO then
+set OO=ww[OO]
+call SaveInteger(B,OO,M[OO],cO)
+call SaveInteger(N,OO,cO,LoadInteger(N,OO,cO)+1)
+set M[OO]=M[OO]+1
+endif
+endif
+endif
+set OO=Tw
+set cO=LoadInteger(ut,OO,cO)
+call TriggerAddCondition(ob(cO),Filter(oO))
+endfunction
+function Tl takes nothing returns boolean
+set Vr=i
+call yO(1144008754,Xi)
+return true
+endfunction
+function Ac takes unit Uc,real Ic returns nothing
+local real Pc=GetUnitX(Uc)
+set Pc=qb(Pc,GetUnitY(Uc),GetUnitFacing(Uc)*0.017453293,Ic)
+set Ic=Bt
+call SetUnitPosition(Uc,Pc,Ic)
+endfunction
+function Sc takes integer sc,real tc returns nothing
+local timer ic=sb()
+call Lb(tt,GetHandleId(ic),sc)
+call TimerStart(ic,tc,false,Ui)
+set h[sc]=ic
+set ic=null
+endfunction
+function iS takes nothing returns nothing
+local integer tS
+call GroupClear(n)
+set f=f-1
+set tS=d[f]
+if lt[tS]==0 then
+call kc("Double free: object of type ForGroupCallback")
+else
+set ct[ot]=tS
+set ot=ot+1
+set lt[tS]=0
+endif
+endfunction
+function jl takes unit Yl,unit Gl,group gl,real hl returns nothing
+local effect Fl
+local integer kl
+call GroupAddUnit(gl,Gl)
+set Fl=AddSpecialEffectTarget("Chirodri.mdx",Gl,"chest")
+call UnitDamageTarget(Yl,Gl,hl,false,false,ATTACK_TYPE_CHAOS,DAMAGE_TYPE_UNIVERSAL,WEAPON_TYPE_WHOKNOWS)
+call UnitAddAbility(Gl,1144008758)
+call SetPlayerAbilityAvailable(GetOwningPlayer(Gl),1144008758,false)
+if yt==0 then
+if pt<32768 then
+set pt=pt+1
+set kl=pt
+set et[kl]=53
+else
+call kc("Out of memory: Could not create Closure.")
+set kl=0
+endif
+else
+set yt=yt-1
+set kl=bt[yt]
+set et[kl]=53
+endif
+set Nr[kl]=Gl
+set Mr[kl]=Fl
+call Sc(kl,4.)
+set Fl=null
+endfunction
+function mc takes unit xc,unit vc returns real
+return 57.295779513*Atan2(GetUnitY(vc)-GetUnitY(xc),GetUnitX(vc)-GetUnitX(xc))
+endfunction
+function wo takes unit Lc,real Xc,string Cc,string Vc returns nothing
+local effect Bc=AddSpecialEffectTarget(Cc,Lc,Vc)
+local integer Nc
+local integer Mc
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set Nc=nt
+set dt[Nc]=6
+else
+call kc("Out of memory: Could not create Closure.")
+set Nc=0
+endif
+else
+set at=at-1
+set Nc=qt[at]
+set dt[Nc]=6
+endif
+set Y[Nc]=0
+set A[Nc]=Lc
+set D[Nc]=Bc
+set Mc=R2I(Xc/0.01+0.5)
+set G[Nc]=sb()
+call Lb(tt,GetHandleId(G[Nc]),Nc)
+set Y[Nc]=Mc
+call TimerStart(G[Nc],0.01,true,Ei)
+set Bc=null
+endfunction
+function xb takes integer db,unit fb returns nothing
+local effect Rb
+local integer Tb
+local integer Yb
+local unit Gb
+local player gb
+local real hb
+local boolean Fb
+local real kb
+local real jb
+if lt[db]<=64 then
+if lt[db]<=61 then
+if lt[db]<=59 then
+if lt[db]<=58 then
+if not IsUnitAlly(fb,gw[db]) then
+set Fb=UnitAlive(fb)
+else
+set Fb=false
+endif
+if Fb then
+call UnitDamageTarget(hw[db],fb,Fw[db],false,false,ATTACK_TYPE_CHAOS,DAMAGE_TYPE_UNIVERSAL,WEAPON_TYPE_WHOKNOWS)
+call Gc("Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl",GetUnitX(fb),GetUnitY(fb))
+call GroupAddUnit(cu,fb)
+set hb=kw[db]
+if yt==0 then
+if pt<32768 then
+set pt=pt+1
+set Tb=pt
+set et[Tb]=42
+else
+call kc("Out of memory: Could not create Closure.")
+set Tb=0
+endif
+else
+set yt=yt-1
+set Tb=bt[yt]
+set et[Tb]=42
+endif
+set Gw[Tb]=fb
+call Sc(Tb,hb)
+set hb=kw[db]
+set Rb=AddSpecialEffectTarget("Bakudo61.mdx",fb,"chest")
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set Tb=nt
+set dt[Tb]=5
+else
+call kc("Out of memory: Could not create Closure.")
+set Tb=0
+endif
+else
+set at=at-1
+set Tb=qt[at]
+set dt[Tb]=5
+endif
+set Y[Tb]=0
+set I[Tb]=fb
+set P[Tb]=Rb
+set Yb=R2I(hb/0.01+0.5)
+set G[Tb]=sb()
+call Lb(tt,GetHandleId(G[Tb]),Tb)
+set Y[Tb]=Yb
+call TimerStart(G[Tb],0.01,true,Ei)
+set db=jw[db]
+set Y[db]=1
+endif
+elseif UnitAlive(fb) and(not IsUnitAlly(fb,Dw[db])) then
+call UnitDamageTarget(Hw[db],fb,Jw[db],false,false,ATTACK_TYPE_CHAOS,DAMAGE_TYPE_UNIVERSAL,WEAPON_TYPE_WHOKNOWS)
+call GroupAddUnit(Zw,fb)
+call wo(fb,3.,"iceflower.mdx","origin")
+if yt==0 then
+if pt<32768 then
+set pt=pt+1
+set db=pt
+set et[db]=45
+else
+call kc("Out of memory: Could not create Closure.")
+set db=0
+endif
+else
+set yt=yt-1
+set db=bt[yt]
+set et[db]=45
+endif
+set Aw[db]=fb
+call Sc(db,3.)
+endif
+elseif lt[db]<=60 then
+if UnitAlive(fb) and(not IsUnitAlly(fb,wu[db])) then
+call UnitDamageTarget(uu[db],fb,ru[db],false,false,ATTACK_TYPE_CHAOS,DAMAGE_TYPE_UNIVERSAL,WEAPON_TYPE_WHOKNOWS)
+call wo(fb,3.,"iceflower.mdx","origin")
+call GroupAddUnit(Zw,fb)
+if yt==0 then
+if pt<32768 then
+set pt=pt+1
+set db=pt
+set et[db]=47
+else
+call kc("Out of memory: Could not create Closure.")
+set db=0
+endif
+else
+set yt=yt-1
+set db=bt[yt]
+set et[db]=47
+endif
+set Mw[db]=fb
+call Sc(db,3.)
+endif
+else
+if not IsUnitAlly(fb,Vu[db]) then
+set Fb=UnitAlive(fb)
+else
+set Fb=false
+endif
+if Fb then
+set db=Bu[db]
+set Y[db]=1
+endif
+endif
+elseif lt[db]<=63 then
+if lt[db]<=62 then
+if IsUnitEnemy(fb,Nu[db]) then
+set Fb=UnitAlive(fb)
+else
+set Fb=false
+endif
+if Fb then
+call UnitDamageTarget(Mu[db],fb,wr[db],false,false,ATTACK_TYPE_CHAOS,DAMAGE_TYPE_UNIVERSAL,WEAPON_TYPE_WHOKNOWS)
+endif
+elseif UnitAlive(fb) and IsUnitEnemy(fb,qu[db]) then
+call SetUnitFacingTimed(au[db],mc(au[db],fb),0.5)
+endif
+elseif UnitAlive(fb) and IsUnitEnemy(fb,nu[db]) then
+set db=du[db]
+set Y[db]=1
+endif
+elseif lt[db]<=67 then
+if lt[db]<=66 then
+if lt[db]<=65 then
+if UnitAlive(fb) and IsUnitEnemy(fb,fu[db]) then
+set gb=fu[db]
+set kb=Ru[db]
+set jb=Tu[db]
+set hb=GetUnitFacing(Yu[db])*0.017453293
+set Gb=CreateUnit(gb,1697656880,kb,jb,hb*57.295779513)
+call SetUnitScale(Gb,0.22,0.22,0.22)
+call KillUnit(Gb)
+call UnitDamageTarget(Gu[db],fb,gu[db],false,false,ATTACK_TYPE_CHAOS,DAMAGE_TYPE_UNIVERSAL,WEAPON_TYPE_WHOKNOWS)
+call IssueImmediateOrderById(fb,851973)
+endif
+elseif UnitAlive(fb) then
+if fb!=fr[db]then
+call Gc("Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl",GetUnitX(fb),GetUnitY(fb))
+call UnitDamageTarget(fr[db],fb,Rr[db],false,false,ATTACK_TYPE_CHAOS,DAMAGE_TYPE_UNIVERSAL,WEAPON_TYPE_WHOKNOWS)
+call IssueImmediateOrderById(fb,851973)
+else
+call UnitDamageTarget(fr[db],fr[db],Rr[db]/3,false,false,ATTACK_TYPE_CHAOS,DAMAGE_TYPE_UNIVERSAL,WEAPON_TYPE_WHOKNOWS)
+endif
+endif
+elseif UnitAlive(fb) and IsUnitEnemy(fb,Tr[db]) then
+call wo(fb,6.,"Abilities\\Spells\\Undead\\FreezingBreath\\FreezingBreathTargetArt.mdl","origin")
+endif
+elseif lt[db]<=69 then
+if lt[db]<=68 then
+if GetUnitTypeId(fb)==1697656887 then
+call KillUnit(fb)
+set Tb=ws[db]
+set Y[Tb]=1
+endif
+if UnitAlive(fb) and IsUnitEnemy(fb,us[db]) then
+set Fb=not IsUnitInGroup(fb,rs[db])
+else
+set Fb=false
+endif
+if Fb then
+call jl(ss[db],fb,rs[db],ts[db])
+endif
+else
+if UnitAlive(fb) and IsUnitEnemy(fb,is[db]) then
+set Fb=not IsUnitInGroup(fb,Ss[db])
+else
+set Fb=false
+endif
+if Fb then
+call jl(cs[db],fb,Ss[db],os[db])
+endif
+endif
+else
+if UnitAlive(fb) and IsUnitEnemy(fb,ds[db]) then
+set Fb=not IsUnitInGroup(fb,fs[db])
+else
+set Fb=false
+endif
+if Fb then
+call GroupAddUnit(fs[db],fb)
+endif
+endif
+set Rb=null
+set Gb=null
+set gb=null
+endfunction
+function TS takes real bS,real yS,real pS,filterfunc eS,integer qS returns nothing
+local unit aS
+local group nS
+local unit dS
+local real fS
+local real RS
+set d[f]=qS
+set f=f+1
+call GroupEnumUnitsInRange(C,bS,yS,pS,eS)
+set aS=null
+set pS=340282366920938000000000000000000000000.
+set nS=C
+loop
+exitwhen FirstOfGroup(nS)==null
+set dS=FirstOfGroup(nS)
+call GroupRemoveUnit(nS,dS)
+set fS=GetUnitX(dS)
+set RS=GetUnitY(dS)
+set fS=fS-bS
+set RS=RS-yS
+set RS=fS*fS+RS*RS
+if RS<pS then
+set aS=dS
+set pS=RS
+endif
+endloop
+call xb(qS,aS)
+call iS()
+set aS=null
+set nS=null
+set dS=null
+endfunction
+function ub takes timer wb returns integer
+return LoadInteger(ut,tt,GetHandleId(wb))
+endfunction
+function ib takes timer tb returns nothing
+if tb==null then
+call kc("Trying to release a null timer")
+return
+endif
+if ub(tb)==679645218 then
+call kc("ReleaseTimer: Double free!")
+return
+endif
+call Lb(tt,GetHandleId(tb),679645218)
+call PauseTimer(tb)
+set rt[st]=tb
+set st=st+1
+endfunction
+function il takes integer JO,unit KO,real LO,real XO,real CO,real VO,player BO,integer NO returns nothing
+local real tl=GetRandomReal(-30.,30.)
+local real MO=Zc(KO,LO,XO)+tl
+local unit wl
+local group ul
+local integer rl
+local integer sl
+set tl=Kc(KO,100.,MO)
+set wl=CreateUnit(BO,1697656888,tl,Ct,MO)
+set ul=CreateGroup()
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set rl=nt
+set dt[rl]=16
+else
+call kc("Out of memory: Could not create Closure.")
+set rl=0
+endif
+else
+set at=at-1
+set rl=qt[at]
+set dt[rl]=16
+endif
+set Y[rl]=0
+set hu[rl]=wl
+set Fu[rl]=BO
+set ku[rl]=ul
+set ju[rl]=KO
+set xu[rl]=CO
+set sl=R2I(VO/0.025+0.5)
+set G[rl]=sb()
+call Lb(tt,GetHandleId(G[rl]),rl)
+set Y[rl]=sl
+call TimerStart(G[rl],0.025,true,Ei)
+if NO>0 then
+call il(JO,KO,LO,XO,CO,VO,BO,NO-1)
+endif
+set wl=null
+set ul=null
+endfunction
+function lS takes real SS,real cS,real oS,integer OS returns nothing
+set d[f]=OS
+set f=f+1
+call GroupEnumUnitsInRange(n,SS,cS,oS,R)
+call iS()
+endfunction
+function VS takes nothing returns nothing
+local integer ES=ub(GetExpiredTimer())
+local integer ZS=ES
+local player US
+local unit IS
+local unit PS
+local integer AS
+local timer DS
+local integer HS
+local group JS
+local boolean KS
+local real LS
+local real XS
+local real CS
+if dt[ES]<=15 then
+if dt[ES]<=8 then
+if dt[ES]<=5 then
+if dt[ES]<=3 then
+if dt[ES]<=2 then
+if UnitAlive(x[ES]) then
+call IssueImmediateOrder(x[ES],"stop")
+else
+set Y[ES]=1
+endif
+set LS=v[ES]
+set XS=m[ES]
+call SetUnitPosition(x[ES],LS,XS)
+else
+if UnitAlive(Q[ES]) then
+call IssueImmediateOrder(Q[ES],"stop")
+else
+set Y[ES]=1
+endif
+set LS=W[ES]
+set XS=E[ES]
+call SetUnitPosition(Q[ES],LS,XS)
+if Y[ES]==1 then
+call DestroyEffect(Z[ES])
+endif
+endif
+elseif dt[ES]<=4 then
+if UnitAlive(U[ES]) then
+call IssueImmediateOrder(U[ES],"stop")
+else
+set Y[ES]=1
+endif
+else
+if UnitAlive(I[ES]) then
+call IssueImmediateOrder(I[ES],"stop")
+else
+set Y[ES]=1
+endif
+if Y[ES]==1 then
+call DestroyEffect(P[ES])
+endif
+endif
+elseif dt[ES]<=7 then
+if dt[ES]<=6 then
+if UnitAlive(A[ES]) then
+call IssueImmediateOrder(A[ES],"stop")
+else
+set Y[ES]=1
+endif
+if Y[ES]==1 then
+call DestroyEffect(D[ES])
+endif
+else
+set AS=Y[ES]
+call DisplayTimedTextToPlayer(fw,0.,0.,1.,I2S(AS))
+if Y[ES]==1 then
+set ew=false
+set XS=iw
+set LS=Sw
+call SetUnitPosition(bw,XS,LS)
+set XS=cw
+set LS=ow
+call SetUnitPosition(yw,XS,LS)
+set US=qw
+set LS=GetUnitX(bw)
+set XS=GetUnitY(bw)
+if GetLocalPlayer()==US then
+call SetCameraPosition(LS,XS)
+endif
+set US=aw
+set LS=GetUnitX(yw)
+set XS=GetUnitY(yw)
+if GetLocalPlayer()==US then
+call SetCameraPosition(LS,XS)
+endif
+set IS=bw
+set PS=bw
+set LS=GetUnitState(PS,UNIT_STATE_MAX_LIFE)*12./100.
+call SetUnitState(IS,UNIT_STATE_LIFE,LS)
+set IS=bw
+set PS=bw
+set LS=GetUnitState(PS,UNIT_STATE_MAX_MANA)
+call SetUnitState(IS,UNIT_STATE_MANA,LS)
+set IS=yw
+set PS=yw
+set LS=GetUnitState(PS,UNIT_STATE_MAX_LIFE)
+call SetUnitState(IS,UNIT_STATE_LIFE,LS)
+set PS=yw
+set IS=yw
+set LS=GetUnitState(IS,UNIT_STATE_MAX_MANA)
+call SetUnitState(PS,UNIT_STATE_MANA,LS)
+call SetUnitInvulnerable(bw,false)
+call SetUnitInvulnerable(yw,false)
+set PS=bw
+if fw==qw then
+call SelectUnit(PS,true)
+endif
+set PS=yw
+if fw==aw then
+call SelectUnit(PS,true)
+endif
+else
+set IS=bw
+set PS=bw
+set LS=GetUnitState(PS,UNIT_STATE_MAX_LIFE)
+call SetUnitState(IS,UNIT_STATE_LIFE,LS)
+set PS=bw
+call SetUnitState(PS,UNIT_STATE_MANA,0.)
+set IS=yw
+set PS=yw
+set LS=GetUnitState(PS,UNIT_STATE_MAX_LIFE)
+call SetUnitState(IS,UNIT_STATE_LIFE,LS)
+set PS=yw
+call SetUnitState(PS,UNIT_STATE_MANA,0.)
+call SetUnitInvulnerable(bw,true)
+call SetUnitInvulnerable(yw,true)
+endif
+endif
+else
+set AS=Y[ES]
+call DisplayTimedTextToPlayer(fw,0.,0.,1.,I2S(AS))
+if Y[ES]==1 then
+call UnitResetCooldown(bw)
+call UnitResetCooldown(yw)
+set ew=false
+set XS=iw
+set LS=Sw
+call SetUnitPosition(bw,XS,LS)
+set XS=cw
+set LS=ow
+call SetUnitPosition(yw,XS,LS)
+set US=qw
+set XS=GetUnitX(bw)
+set LS=GetUnitY(bw)
+if GetLocalPlayer()==US then
+call SetCameraPosition(XS,LS)
+endif
+set US=aw
+set LS=GetUnitX(yw)
+set XS=GetUnitY(yw)
+if GetLocalPlayer()==US then
+call SetCameraPosition(LS,XS)
+endif
+set IS=bw
+set PS=bw
+set LS=GetUnitState(PS,UNIT_STATE_MAX_LIFE)
+call SetUnitState(IS,UNIT_STATE_LIFE,LS)
+set PS=bw
+set IS=bw
+set LS=GetUnitState(IS,UNIT_STATE_MAX_MANA)
+call SetUnitState(PS,UNIT_STATE_MANA,LS)
+set PS=yw
+set IS=yw
+set LS=GetUnitState(IS,UNIT_STATE_MAX_LIFE)
+call SetUnitState(PS,UNIT_STATE_LIFE,LS)
+set PS=yw
+set IS=yw
+set LS=GetUnitState(IS,UNIT_STATE_MAX_MANA)
+call SetUnitState(PS,UNIT_STATE_MANA,LS)
+call SetUnitInvulnerable(bw,false)
+call SetUnitInvulnerable(yw,false)
+endif
+endif
+elseif dt[ES]<=12 then
+if dt[ES]<=10 then
+if dt[ES]<=9 then
+call Ac(vw[ES],100.)
+set PS=vw[ES]
+set XS=GetUnitX(PS)
+set LS=GetUnitY(PS)
+if ot==0 then
+if Ot<32768 then
+set Ot=Ot+1
+set AS=Ot
+set lt[AS]=58
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set ot=ot-1
+set AS=ct[ot]
+set lt[AS]=58
+endif
+set gw[AS]=mw[ES]
+set hw[AS]=Qw[ES]
+set Fw[AS]=Ww[ES]
+set kw[AS]=Ew[ES]
+set jw[AS]=ES
+call TS(XS,LS,90.,null,AS)
+if Y[ES]==1 then
+call KillUnit(vw[ES])
+if yt==0 then
+if pt<32768 then
+set pt=pt+1
+set AS=pt
+set et[AS]=43
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set yt=yt-1
+set AS=bt[yt]
+set et[AS]=43
+endif
+set xw[AS]=vw[ES]
+call Sc(AS,2.)
+endif
+else
+call SetUnitAnimationByIndex(Iw[ES],15)
+endif
+elseif dt[ES]<=11 then
+call IssueImmediateOrderById(Pw[ES],851973)
+if Y[ES]==1 then
+call SetUnitTimeScale(Pw[ES],1.)
+endif
+else
+call IssueImmediateOrderById(tu[ES],851973)
+if Y[ES]==1 then
+call SetUnitInvulnerable(tu[ES],false)
+endif
+endif
+elseif dt[ES]<=14 then
+if dt[ES]<=13 then
+call IssueImmediateOrderById(bu[ES],851973)
+call SetUnitAnimationByIndex(bu[ES],7)
+if Y[ES]==1 then
+call Db(Cu,bu[ES],yu[ES],pu[ES],false)
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set AS=nt
+set dt[AS]=14
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set at=at-1
+set AS=qt[at]
+set dt[AS]=14
+endif
+set Y[AS]=0
+set ou[AS]=bu[ES]
+set Ou[AS]=yu[ES]
+set lu[AS]=pu[ES]
+set ES=R2I(50.5)
+set G[AS]=sb()
+set DS=G[AS]
+call Lb(tt,GetHandleId(DS),AS)
+set Y[AS]=ES
+call TimerStart(G[AS],0.01,true,Ei)
+endif
+else
+call IssueImmediateOrderById(ou[ES],851973)
+if Y[ES]==1 then
+call Db(Cu,ou[ES],Ou[ES],lu[ES],false)
+endif
+endif
+else
+if Y[ES]!=1 then
+set KS=not UnitAlive(ur[ES])
+else
+set KS=false
+endif
+if KS then
+set Y[ES]=1
+endif
+call Ac(ur[ES],50.)
+set PS=ur[ES]
+set XS=GetUnitX(PS)
+set LS=GetUnitY(PS)
+if ot==0 then
+if Ot<32768 then
+set Ot=Ot+1
+set AS=Ot
+set lt[AS]=61
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set ot=ot-1
+set AS=ct[ot]
+set lt[AS]=61
+endif
+set Vu[AS]=rr[ES]
+set Bu[AS]=ES
+call lS(XS,LS,140.,AS)
+if Y[ES]==1 then
+call KillUnit(ur[ES])
+call KillUnit(CreateUnit(rr[ES],1697656880,XS,LS,0.))
+if ot==0 then
+if Ot<32768 then
+set Ot=Ot+1
+set AS=Ot
+set lt[AS]=62
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set ot=ot-1
+set AS=ct[ot]
+set lt[AS]=62
+endif
+set Nu[AS]=rr[ES]
+set Mu[AS]=sr[ES]
+set wr[AS]=tr[ES]
+call lS(XS,LS,380.,AS)
+endif
+endif
+elseif dt[ES]<=22 then
+if dt[ES]<=19 then
+if dt[ES]<=17 then
+if dt[ES]<=16 then
+call Ac(hu[ES],15.)
+set PS=hu[ES]
+set LS=GetUnitX(PS)
+set XS=GetUnitY(PS)
+if ot==0 then
+if Ot<32768 then
+set Ot=Ot+1
+set AS=Ot
+set lt[AS]=63
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set ot=ot-1
+set AS=ct[ot]
+set lt[AS]=63
+endif
+set qu[AS]=Fu[ES]
+set au[AS]=hu[ES]
+call TS(LS,XS,600.,null,AS)
+if ot==0 then
+if Ot<32768 then
+set Ot=Ot+1
+set AS=Ot
+set lt[AS]=64
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set ot=ot-1
+set AS=ct[ot]
+set lt[AS]=64
+endif
+set nu[AS]=Fu[ES]
+set du[AS]=ES
+call TS(LS,XS,100.,null,AS)
+if Y[ES]==1 then
+call DestroyGroup(ku[ES])
+if ot==0 then
+if Ot<32768 then
+set Ot=Ot+1
+set AS=Ot
+set lt[AS]=65
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set ot=ot-1
+set AS=ct[ot]
+set lt[AS]=65
+endif
+set fu[AS]=Fu[ES]
+set Ru[AS]=LS
+set Tu[AS]=XS
+set Yu[AS]=hu[ES]
+set Gu[AS]=ju[ES]
+set gu[AS]=xu[ES]
+call lS(LS,XS,100.,AS)
+call KillUnit(hu[ES])
+endif
+else
+call SetUnitAnimationByIndex(Iu[ES],11)
+call IssueImmediateOrder(Iu[ES],"stop")
+if Y[ES]==1 then
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set AS=nt
+set dt[AS]=18
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set at=at-1
+set AS=qt[at]
+set dt[AS]=18
+endif
+set Y[AS]=0
+set vu[AS]=Iu[ES]
+set mu[AS]=Pu[ES]
+set Qu[AS]=Au[ES]
+set Wu[AS]=Du[ES]
+set Eu[AS]=Hu[ES]
+set Zu[AS]=Ju[ES]
+set Uu[AS]=Ku[ES]
+set ES=R2I(20.5)
+set G[AS]=sb()
+set DS=G[AS]
+call Lb(tt,GetHandleId(DS),AS)
+set Y[AS]=ES
+call TimerStart(G[AS],0.01,true,Ei)
+endif
+endif
+elseif dt[ES]<=18 then
+call IssueImmediateOrder(vu[ES],"stop")
+if Y[ES]==1 then
+call SetUnitTimeScale(vu[ES],1.)
+set XS=Qu[ES]
+set LS=Wu[ES]
+call il(mu[ES],vu[ES],XS,LS,Eu[ES],Zu[ES],GetOwningPlayer(vu[ES]),Uu[ES])
+endif
+else
+set PS=Lr[ES]
+set XS=GetUnitX(PS)
+set CS=GetUnitY(PS)
+set LS=GetUnitFacing(Lr[ES])*0.017453293
+call IssueImmediateOrderById(Lr[ES],851973)
+if Y[ES]==1 then
+set US=Xr[ES]
+set PS=CreateUnit(US,1697656889,XS,CS,LS*57.295779513)
+call SetUnitVertexColor(Lr[ES],0,0,0,0)
+call Gc("DevilSlam.mdx",XS,CS)
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set AS=nt
+set dt[AS]=20
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set at=at-1
+set AS=qt[at]
+set dt[AS]=20
+endif
+set Y[AS]=0
+set ar[AS]=Lr[ES]
+set nr[AS]=PS
+set HS=R2I(1080.5)
+set G[AS]=sb()
+set DS=G[AS]
+call Lb(tt,GetHandleId(DS),AS)
+set Y[AS]=HS
+call TimerStart(G[AS],0.01,true,Ei)
+if yt==0 then
+if pt<32768 then
+set pt=pt+1
+set AS=pt
+set et[AS]=49
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set yt=yt-1
+set AS=bt[yt]
+set et[AS]=49
+endif
+set Ir[AS]=Lr[ES]
+set Pr[AS]=XS
+set Ar[AS]=CS
+set Dr[AS]=PS
+set Hr[AS]=Xr[ES]
+set Jr[AS]=LS
+set Kr[AS]=Cr[ES]
+call Sc(AS,1.2)
+endif
+endif
+elseif dt[ES]<=21 then
+if dt[ES]<=20 then
+if UnitAlive(ar[ES]) then
+call IssueImmediateOrderById(ar[ES],851973)
+else
+call RemoveUnit(nr[ES])
+call SetUnitVertexColor(ar[ES],255,255,255,1000)
+set Y[ES]=1
+endif
+else
+if UnitAlive(xr[ES]) then
+set US=vr[ES]
+set LS=mr[ES]
+set CS=Qr[ES]
+set XS=Wr[ES]
+set PS=CreateUnit(US,1697656897,LS,CS,XS*57.295779513)
+if yt==0 then
+if pt<32768 then
+set pt=pt+1
+set AS=pt
+set et[AS]=50
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set yt=yt-1
+set AS=bt[yt]
+set et[AS]=50
+endif
+set dr[AS]=PS
+call Sc(AS,2.)
+set XS=mr[ES]
+set LS=Qr[ES]
+if ot==0 then
+if Ot<32768 then
+set Ot=Ot+1
+set AS=Ot
+set lt[AS]=66
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set ot=ot-1
+set AS=ct[ot]
+set lt[AS]=66
+endif
+set fr[AS]=xr[ES]
+set Rr[AS]=Er[ES]
+call lS(XS,LS,1000.,AS)
+else
+set Y[ES]=1
+endif
+if Y[ES]==1 then
+set XS=mr[ES]
+set LS=Qr[ES]
+if ot==0 then
+if Ot<32768 then
+set Ot=Ot+1
+set AS=Ot
+set lt[AS]=67
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set ot=ot-1
+set AS=ct[ot]
+set lt[AS]=67
+endif
+set Tr[AS]=vr[ES]
+call lS(XS,LS,1000.,AS)
+if yt==0 then
+if pt<32768 then
+set pt=pt+1
+set AS=pt
+set et[AS]=51
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set yt=yt-1
+set AS=bt[yt]
+set et[AS]=51
+endif
+set gr[AS]=Zr[ES]
+set hr[AS]=mr[ES]
+set Fr[AS]=Qr[ES]
+set kr[AS]=Ur[ES]
+set jr[AS]=xr[ES]
+call Sc(AS,1.5)
+endif
+endif
+else
+call Ac(Os[ES],150.)
+set PS=Os[ES]
+set XS=GetUnitX(PS)
+set LS=GetUnitY(PS)
+if ot==0 then
+if Ot<32768 then
+set Ot=Ot+1
+set AS=Ot
+set lt[AS]=68
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set ot=ot-1
+set AS=ct[ot]
+set lt[AS]=68
+endif
+set ws[AS]=ES
+set us[AS]=ls[ES]
+set rs[AS]=bs[ES]
+set ss[AS]=ys[ES]
+set ts[AS]=ps[ES]
+call lS(XS,LS,105.,AS)
+if Y[ES]==1 then
+if ot==0 then
+if Ot<32768 then
+set Ot=Ot+1
+set AS=Ot
+set lt[AS]=69
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set ot=ot-1
+set AS=ct[ot]
+set lt[AS]=69
+endif
+set is[AS]=ls[ES]
+set Ss[AS]=bs[ES]
+set cs[AS]=ys[ES]
+set os[AS]=ps[ES]
+call lS(XS,LS,380.,AS)
+call SetUnitScale(Os[ES],1.4,1.4,1.4)
+call KillUnit(Os[ES])
+call DestroyGroup(bs[ES])
+endif
+endif
+elseif dt[ES]<=26 then
+if dt[ES]<=24 then
+if dt[ES]<=23 then
+call SetUnitAnimationByIndex(qs[ES],14)
+else
+set AS=ES
+call IssueImmediateOrderById(as[ES],851973)
+set JS=ns[ES]
+set V=CreateGroup()
+call ForGroup(JS,Zi)
+set JS=V
+loop
+exitwhen FirstOfGroup(JS)==null
+set PS=FirstOfGroup(JS)
+call GroupRemoveUnit(JS,PS)
+if UnitAlive(PS) then
+call IssueImmediateOrderById(PS,851973)
+else
+call GroupRemoveUnit(ns[AS],PS)
+endif
+endloop
+call GroupClear(JS)
+call DestroyGroup(JS)
+endif
+elseif dt[ES]<=25 then
+if Y[ES]!=1 then
+set PS=Rs[ES]
+set CS=GetUnitX(PS)
+set LS=GetUnitY(PS)
+set PS=CreateUnit(Ts[ES],1697656884,CS,LS,GetRandomReal(0.,360.))
+call GroupAddUnit(Ys[ES],PS)
+if ot==0 then
+if Ot<32768 then
+set Ot=Ot+1
+set AS=Ot
+set lt[AS]=70
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set ot=ot-1
+set AS=ct[ot]
+set lt[AS]=70
+endif
+set ds[AS]=Ts[ES]
+set fs[AS]=Gs[ES]
+call lS(CS,LS,230.,AS)
+endif
+else
+call Ac(Ws[ES],65.)
+if Y[ES]==1 then
+call RemoveUnit(Ws[ES])
+call SetUnitTimeScale(Zs[ES],1.)
+call SetUnitAnimationByIndex(Zs[ES],16)
+if yt==0 then
+if pt<32768 then
+set pt=pt+1
+set AS=pt
+set et[AS]=55
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set yt=yt-1
+set AS=bt[yt]
+set et[AS]=55
+endif
+set js[AS]=Es[ES]
+set xs[AS]=Zs[ES]
+set vs[AS]=Us[ES]
+set ms[AS]=Is[ES]
+set Qs[AS]=Ps[ES]
+call Sc(AS,0.4)
+endif
+endif
+elseif dt[ES]<=28 then
+if dt[ES]<=27 then
+if UnitAlive(Vs[ES]) then
+call IssueImmediateOrderById(Vs[ES],851973)
+call IssueImmediateOrderById(Bs[ES],851973)
+call SetUnitAnimationByIndex(Vs[ES],15)
+set PS=Vs[ES]
+set LS=mc(Vs[ES],Bs[ES])*0.017453293
+call SetUnitFacing(PS,LS*57.295779513)
+else
+call DestroyEffect(Ns[ES])
+set Y[ES]=1
+endif
+if Y[ES]==1 then
+if UnitAlive(Vs[ES]) then
+call SetUnitTimeScale(Vs[ES],3.)
+call SetUnitAnimationByIndex(Vs[ES],15)
+set PS=Vs[ES]
+call Gc("BlackBlink.mdx",GetUnitX(PS),GetUnitY(PS))
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set AS=nt
+set dt[AS]=28
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set at=at-1
+set AS=qt[at]
+set dt[AS]=28
+endif
+set Y[AS]=0
+set Ks[AS]=Vs[ES]
+set Ls[AS]=Bs[ES]
+set Xs[AS]=Ns[ES]
+set Cs[AS]=Ms[ES]
+set ES=R2I(15.500000954)
+set G[AS]=sb()
+set DS=G[AS]
+call Lb(tt,GetHandleId(DS),AS)
+set Y[AS]=ES
+call TimerStart(G[AS],0.01,true,Ei)
+else
+call DestroyEffect(Ns[ES])
+endif
+endif
+else
+call IssueImmediateOrder(Ks[ES],"stop")
+call IssueImmediateOrder(Ls[ES],"stop")
+if Y[ES]==1 then
+call SetUnitTimeScale(Ks[ES],1.)
+call DestroyEffect(Xs[ES])
+set PS=Ls[ES]
+call Gc("blood.mdx",GetUnitX(PS),GetUnitY(PS))
+set PS=Ks[ES]
+set LS=Kc(Ls[ES],100.,mc(Ks[ES],Ls[ES]))
+set XS=Ct
+call SetUnitPosition(PS,LS,XS)
+set PS=Ks[ES]
+call Gc("BlackBlink.mdx",GetUnitX(PS),GetUnitY(PS))
+call UnitDamageTarget(Ks[ES],Ls[ES],Cs[ES],false,false,ATTACK_TYPE_CHAOS,DAMAGE_TYPE_UNIVERSAL,WEAPON_TYPE_WHOKNOWS)
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set AS=nt
+set dt[AS]=29
+else
+call kc("Out of memory: Could not create Closure.")
+set AS=0
+endif
+else
+set at=at-1
+set AS=qt[at]
+set dt[AS]=29
+endif
+set Y[AS]=0
+set Js[AS]=Ks[ES]
+set ES=R2I(50.5)
+set G[AS]=sb()
+set DS=G[AS]
+call Lb(tt,GetHandleId(DS),AS)
+set Y[AS]=ES
+call TimerStart(G[AS],0.01,true,Ei)
+endif
+endif
+else
+call IssueImmediateOrder(Js[ES],"stop")
+endif
+set Y[ZS]=Y[ZS]-1
+if Y[ZS]<=0 then
+call ib(G[ZS])
+if dt[ZS]==0 then
+call kc("Double free: object of type CallbackCounted")
+else
+set qt[at]=ZS
+set at=at+1
+set dt[ZS]=0
+endif
+endif
+set US=null
+set IS=null
+set PS=null
+set DS=null
+set JS=null
+endfunction
+function Vl takes nothing returns boolean
+set ut=InitHashtable()
+return true
+endfunction
+function Wo takes nothing returns boolean
+return true
+endfunction
+function Xl takes nothing returns boolean
+local integer Ll
+if Kt==0 then
+if Lt<32768 then
+set Lt=Lt+1
+set Ll=Lt
+else
+call kc("Out of memory: Could not create Spell.")
+set Ll=0
+endif
+else
+set Kt=Kt-1
+set Ll=Jt[Kt]
+endif
+set wt[Ll]=b
+set Hs=Ll
+return true
+endfunction
+function YS takes nothing returns boolean
+set T=200
+return true
+endfunction
+function hS takes real GS,integer gS returns integer
+set g[gS]=sb()
+call Lb(tt,GetHandleId(g[gS]),gS)
+call TimerStart(g[gS],GS,true,Wi)
+return gS
+endfunction
+function Yo takes nothing returns boolean
+local rect ao=w
+local real To=GetRectCenterX(ao)
+local real fo=GetRectCenterY(ao)
+local player no
+local unit do
+local integer Ro
+set uw=To
+set rw=fo
+set ao=u
+set fo=GetRectCenterX(ao)
+set To=GetRectCenterY(ao)
+set sw=fo
+set tw=To
+set ao=r
+set fo=GetRectCenterX(ao)
+set To=GetRectCenterY(ao)
+set iw=fo
+set Sw=To
+set ao=s
+set fo=GetRectCenterX(ao)
+set To=GetRectCenterY(ao)
+set cw=fo
+set ow=To
+set pw=2
+set ew=true
+set qw=Player(0)
+set aw=Player(5)
+set ew=false
+set To=uw
+set fo=rw
+set bw=CreateUnit(qw,1211445297,To,fo,0.)
+set To=sw
+set fo=tw
+set yw=CreateUnit(aw,1211445297,To,fo,0.)
+call SetHeroLevel(bw,35,false)
+call SetHeroLevel(yw,35,false)
+call SetUnitInvulnerable(bw,true)
+call SetUnitInvulnerable(yw,true)
+set no=qw
+call SetPlayerState(no,PLAYER_STATE_RESOURCE_GOLD,999999)
+set no=aw
+call SetPlayerState(no,PLAYER_STATE_RESOURCE_GOLD,999999)
+set do=bw
+if fw==qw then
+call SelectUnit(do,true)
+endif
+set do=yw
+if fw==aw then
+call SelectUnit(do,true)
+endif
+set no=qw
+set To=GetUnitX(bw)
+set fo=GetUnitY(bw)
+if GetLocalPlayer()==no then
+call SetCameraPosition(To,fo)
+endif
+set no=aw
+set fo=GetUnitX(yw)
+set To=GetUnitY(yw)
+if GetLocalPlayer()==no then
+call SetCameraPosition(fo,To)
+endif
+call SetCameraField(CAMERA_FIELD_TARGET_DISTANCE,2400.,0.)
+call SetFloatGameState(GAME_STATE_TIME_OF_DAY,6.)
+if Rt==0 then
+if Tt<32768 then
+set Tt=Tt+1
+set Ro=Tt
+set Yt[Ro]=31
+else
+call kc("Out of memory: Could not create Closure.")
+set Ro=0
+endif
+else
+set Rt=Rt-1
+set Ro=ft[Rt]
+set Yt[Ro]=31
+endif
+call hS(120.,Ro)
+if Rt==0 then
+if Tt<32768 then
+set Tt=Tt+1
+set Ro=Tt
+set Yt[Ro]=32
+else
+call kc("Out of memory: Could not create Closure.")
+set Ro=0
+endif
+else
+set Rt=Rt-1
+set Ro=ft[Rt]
+set Yt[Ro]=32
+endif
+call hS(1.,Ro)
+if Rt==0 then
+if Tt<32768 then
+set Tt=Tt+1
+set Ro=Tt
+set Yt[Ro]=33
+else
+call kc("Out of memory: Could not create Closure.")
+set Ro=0
+endif
+else
+set Rt=Rt-1
+set Ro=ft[Rt]
+set Yt[Ro]=33
+endif
+call hS(0.05,Ro)
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set Ro=nt
+set dt[Ro]=7
+else
+call kc("Out of memory: Could not create Closure.")
+set Ro=0
+endif
+else
+set at=at-1
+set Ro=qt[at]
+set dt[Ro]=7
+endif
+set Y[Ro]=0
+call WS(Ro,1.,10)
+call tO(EVENT_PLAYER_UNIT_DEATH,Pi)
+set ao=null
+set no=null
+set do=null
+return true
+endfunction
+function bo takes nothing returns boolean
+set L=CreateTimer()
+call TimerStart(L,100000.,false,null)
+call TimerStart(CreateTimer(),0.030,true,Ii)
+return true
+endfunction
+function cl takes nothing returns boolean
+local integer Sl
+if It==0 then
+if Pt<32768 then
+set Pt=Pt+1
+set Sl=Pt
+else
+call kc("Out of memory: Could not create Spell.")
+set Sl=0
+endif
+else
+set It=It-1
+set Sl=Ut[It]
+endif
+set er[Sl]=S
+set cr=Sl
+call yO(1144008755,Ji)
+call yO(1144008756,Ki)
+return true
+endfunction
+function el takes nothing returns nothing
+call UnitRemoveAbility(GetTriggerUnit(),1144008756)
+endfunction
+function eo takes nothing returns nothing
+call GroupAddUnit(V,GetEnumUnit())
+endfunction
+function fc takes nothing returns boolean
+local integer dc
+set F[0]="0"
+set F[1]="1"
+set F[2]="2"
+set F[3]="3"
+set F[4]="4"
+set F[5]="5"
+set F[6]="6"
+set F[7]="7"
+set F[8]="8"
+set F[9]="9"
+set F[10]="A"
+set F[11]="B"
+set F[12]="C"
+set F[13]="D"
+set F[14]="E"
+set F[15]="F"
+set k=Nl()
+set dc=0
+loop
+exitwhen dc>15
+call Lb(k,StringHash(F[dc]),dc)
+set dc=dc+1
+endloop
+return true
+endfunction
+function gO takes nothing returns nothing
+local unit eO=GetTriggerUnit()
+local real RO=GetSpellTargetX()
+local real TO=GetSpellTargetY()
+local real qO
+local real aO
+local player nO
+local unit dO
+local integer fO
+local real YO
+local real GO
+if GetUnitAbilityLevel(eO,1144008756)<=0 then
+set fO=GetUnitAbilityLevel(eO,1144008752)
+set qO=GetHeroInt(eO,true)*1.
+set aO=2+0.5*fO
+set GO=Zc(eO,RO,TO)
+set nO=GetOwningPlayer(eO)
+set YO=Kc(eO,70.,GO)
+set GO=Ct
+set dO=CreateUnit(nO,1697656886,YO,GO,57.295779513*Atan2(TO-GO,RO-YO))
+call StartSound(Yw)
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set fO=nt
+set dt[fO]=9
+else
+call kc("Out of memory: Could not create Closure.")
+set fO=0
+endif
+else
+set at=at-1
+set fO=qt[at]
+set dt[fO]=9
+endif
+set Y[fO]=0
+set vw[fO]=dO
+set mw[fO]=nO
+set Qw[fO]=eO
+set Ww[fO]=qO
+set Ew[fO]=aO
+call xS(0.025,0.3,fO)
+else
+set fO=Uw
+set qO=0.5*GetUnitAbilityLevel(eO,1144008752)*GetHeroInt(eO,true)
+set nO=GetOwningPlayer(eO)
+set GO=GetUnitX(eO)
+set aO=GetUnitY(eO)
+if SquareRoot((RO-GO)*(RO-GO)+(TO-aO)*(TO-aO))>100. then
+call StartSound(iu[fO])
+set dO=CreateUnit(nO,1697656881,RO,TO,0)
+call SetUnitTimeScale(eO,1.5)
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set fO=nt
+set dt[fO]=10
+else
+call kc("Out of memory: Could not create Closure.")
+set fO=0
+endif
+else
+set at=at-1
+set fO=qt[at]
+set dt[fO]=10
+endif
+set Y[fO]=0
+set Iw[fO]=eO
+call xS(0.01,0.05,fO)
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set fO=nt
+set dt[fO]=11
+else
+call kc("Out of memory: Could not create Closure.")
+set fO=0
+endif
+else
+set at=at-1
+set fO=qt[at]
+set dt[fO]=11
+endif
+set Y[fO]=0
+set Pw[fO]=eO
+call xS(0.01,0.6,fO)
+if yt==0 then
+if pt<32768 then
+set pt=pt+1
+set fO=pt
+set et[fO]=44
+else
+call kc("Out of memory: Could not create Closure.")
+set fO=0
+endif
+else
+set yt=yt-1
+set fO=bt[yt]
+set et[fO]=44
+endif
+set Lw[fO]=dO
+set Xw[fO]=nO
+set Cw[fO]=RO
+set Vw[fO]=TO
+set Bw[fO]=eO
+set Nw[fO]=qO
+call Sc(fO,1.7)
+else
+call StartSound(Su[fO])
+set GO=GetUnitX(eO)
+set aO=GetUnitY(eO)
+set dO=CreateUnit(nO,1697656882,GO,aO,0)
+if ot==0 then
+if Ot<32768 then
+set Ot=Ot+1
+set fO=Ot
+set lt[fO]=60
+else
+call kc("Out of memory: Could not create Closure.")
+set fO=0
+endif
+else
+set ot=ot-1
+set fO=ct[ot]
+set lt[fO]=60
+endif
+set wu[fO]=nO
+set uu[fO]=eO
+set ru[fO]=qO
+call lS(RO,TO,680.,fO)
+if yt==0 then
+if pt<32768 then
+set pt=pt+1
+set fO=pt
+set et[fO]=48
+else
+call kc("Out of memory: Could not create Closure.")
+set fO=0
+endif
+else
+set yt=yt-1
+set fO=bt[yt]
+set et[fO]=48
+endif
+set su[fO]=dO
+call Sc(fO,3.)
+call SetUnitInvulnerable(eO,true)
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set fO=nt
+set dt[fO]=12
+else
+call kc("Out of memory: Could not create Closure.")
+set fO=0
+endif
+else
+set at=at-1
+set fO=qt[at]
+set dt[fO]=12
+endif
+set Y[fO]=0
+set tu[fO]=eO
+call xS(0.01,1.2,fO)
+endif
+endif
+set eO=null
+set nO=null
+set dO=null
+endfunction
+function gc takes nothing returns boolean
+set j=InitHashtable()
+return true
+endfunction
+function jO takes nothing returns boolean
+local integer kO
+if Et==0 then
+if Zt<32768 then
+set Zt=Zt+1
+set kO=Zt
+else
+call kc("Out of memory: Could not create Spell.")
+set kO=0
+endif
+else
+set Et=Et-1
+set kO=Wt[Et]
+endif
+set ir[kO]=t
+set Sr[kO]=e
+set Cu=kO
+call yO(1144008753,Hi)
+return true
+endfunction
+function jc takes nothing returns boolean
+return true
+endfunction
+function mo takes nothing returns boolean
+return true
+endfunction
+function nb takes string ab returns nothing
+endfunction
+function nc takes nothing returns nothing
+local integer cc=ub(GetExpiredTimer())
+local boolean oc
+local integer Oc
+local unit lc
+local effect bc
+local integer yc
+local timer pc
+local group ec
+local real qc
+local real ac
+if et[cc]<=46 then
+if et[cc]<=41 then
+if et[cc]<=38 then
+if et[cc]<=37 then
+if et[cc]<=36 then
+set T=T+50
+else
+set T=T*2
+endif
+else
+set T=T/2
+set Oc=T
+if Oc!=250 then
+call nb("Expected <"+I2S(250)+">, Actual <"+I2S(Oc)+">")
+endif
+endif
+elseif et[cc]<=40 then
+if et[cc]<=39 then
+if H[cc]>0. then
+set lc=J[cc]
+set qc=H[cc]-0.1
+set oc=K[cc]
+if yt==0 then
+if pt<32768 then
+set pt=pt+1
+set Oc=pt
+set et[Oc]=39
+else
+call kc("Out of memory: Could not create Closure.")
+set Oc=0
+endif
+else
+set yt=yt-1
+set Oc=bt[yt]
+set et[Oc]=39
+endif
+set H[Oc]=qc
+set J[Oc]=lc
+set K[Oc]=oc
+set pc=sb()
+call Lb(tt,GetHandleId(pc),Oc)
+call TimerStart(pc,0.1,false,Ui)
+set h[Oc]=pc
+elseif K[cc]then
+call RemoveUnit(J[cc])
+endif
+else
+set lc=Ow[cc]
+set yc=lw[cc]+1
+call PauseUnit(lc,true)
+call SetUnitAnimationByIndex(lc,yc)
+call DisplayTimedTextToPlayer(fw,0.,0.,45.,I2S(yc))
+if yt==0 then
+if pt<32768 then
+set pt=pt+1
+set Oc=pt
+set et[Oc]=40
+else
+call kc("Out of memory: Could not create Closure.")
+set Oc=0
+endif
+else
+set yt=yt-1
+set Oc=bt[yt]
+set et[Oc]=40
+endif
+set Ow[Oc]=lc
+set lw[Oc]=yc
+set pc=sb()
+call Lb(tt,GetHandleId(pc),Oc)
+call TimerStart(pc,1.5,false,Ui)
+set h[Oc]=pc
+endif
+else
+call RemoveUnit(nw[cc])
+endif
+elseif et[cc]<=44 then
+if et[cc]<=43 then
+if et[cc]<=42 then
+call GroupRemoveUnit(cu,Gw[cc])
+else
+call RemoveUnit(xw[cc])
+endif
+else
+call RemoveUnit(Lw[cc])
+set qc=Cw[cc]
+set lc=CreateUnit(Xw[cc],1697656882,qc,Vw[cc],0)
+set qc=Cw[cc]
+set ac=Vw[cc]
+if ot==0 then
+if Ot<32768 then
+set Ot=Ot+1
+set Oc=Ot
+set lt[Oc]=59
+else
+call kc("Out of memory: Could not create Closure.")
+set Oc=0
+endif
+else
+set ot=ot-1
+set Oc=ct[ot]
+set lt[Oc]=59
+endif
+set Dw[Oc]=Xw[cc]
+set Hw[Oc]=Bw[cc]
+set Jw[Oc]=Nw[cc]
+call lS(qc,ac,680.,Oc)
+if yt==0 then
+if pt<32768 then
+set pt=pt+1
+set Oc=pt
+set et[Oc]=46
+else
+call kc("Out of memory: Could not create Closure.")
+set Oc=0
+endif
+else
+set yt=yt-1
+set Oc=bt[yt]
+set et[Oc]=46
+endif
+set Kw[Oc]=lc
+set pc=sb()
+call Lb(tt,GetHandleId(pc),Oc)
+call TimerStart(pc,3.,false,Ui)
+set h[Oc]=pc
+endif
+elseif et[cc]<=45 then
+call GroupRemoveUnit(Zw,Aw[cc])
+else
+call RemoveUnit(Kw[cc])
+endif
+elseif et[cc]<=51 then
+if et[cc]<=49 then
+if et[cc]<=48 then
+if et[cc]<=47 then
+call GroupRemoveUnit(Zw,Mw[cc])
+else
+call RemoveUnit(su[cc])
+endif
+elseif UnitAlive(Ir[cc]) then
+call Gc("IceExp.mdx",Pr[cc],Ar[cc])
+set bc=AddSpecialEffectTarget("RukiaAura.mdx",Dr[cc],"origin")
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set yc=nt
+set dt[yc]=21
+else
+call kc("Out of memory: Could not create Closure.")
+set yc=0
+endif
+else
+set at=at-1
+set yc=qt[at]
+set dt[yc]=21
+endif
+set Y[yc]=0
+set xr[yc]=Ir[cc]
+set vr[yc]=Hr[cc]
+set mr[yc]=Pr[cc]
+set Qr[yc]=Ar[cc]
+set Wr[yc]=Jr[cc]
+set Er[yc]=Kr[cc]
+set Zr[yc]=bc
+set Ur[yc]=Dr[cc]
+set Oc=R2I(23.227272034)
+set G[yc]=sb()
+set pc=G[yc]
+call Lb(tt,GetHandleId(pc),yc)
+set Y[yc]=Oc
+call TimerStart(G[yc],0.33,true,Ei)
+else
+call RemoveUnit(Dr[cc])
+call SetUnitVertexColor(Ir[cc],255,255,255,1000)
+endif
+elseif et[cc]<=50 then
+call KillUnit(dr[cc])
+else
+call DestroyEffect(gr[cc])
+call Gc("DustWave.mdx",hr[cc],Fr[cc])
+call Gc("DevilSlam.mdx",hr[cc],Fr[cc])
+if yt==0 then
+if pt<32768 then
+set pt=pt+1
+set Oc=pt
+set et[Oc]=52
+else
+call kc("Out of memory: Could not create Closure.")
+set Oc=0
+endif
+else
+set yt=yt-1
+set Oc=bt[yt]
+set et[Oc]=52
+endif
+set Yr[Oc]=kr[cc]
+set Gr[Oc]=jr[cc]
+set pc=sb()
+call Lb(tt,GetHandleId(pc),Oc)
+call TimerStart(pc,0.05,false,Ui)
+set h[Oc]=pc
+endif
+elseif et[cc]<=54 then
+if et[cc]<=53 then
+if et[cc]<=52 then
+call RemoveUnit(Yr[cc])
+call SetUnitVertexColor(Gr[cc],255,255,255,1000)
+else
+call UnitRemoveAbility(Nr[cc],1144008758)
+if yt==0 then
+if pt<32768 then
+set pt=pt+1
+set Oc=pt
+set et[Oc]=54
+else
+call kc("Out of memory: Could not create Closure.")
+set Oc=0
+endif
+else
+set yt=yt-1
+set Oc=bt[yt]
+set et[Oc]=54
+endif
+set Br[Oc]=Mr[cc]
+set pc=sb()
+call Lb(tt,GetHandleId(pc),Oc)
+call TimerStart(pc,2.,false,Ui)
+set h[Oc]=pc
+endif
+else
+call DestroyEffect(Br[cc])
+endif
+elseif et[cc]<=55 then
+call StartSound(Ds[js[cc]])
+call SetUnitAnimationByIndex(xs[cc],15)
+if yt==0 then
+if pt<32768 then
+set pt=pt+1
+set Oc=pt
+set et[Oc]=56
+else
+call kc("Out of memory: Could not create Closure.")
+set Oc=0
+endif
+else
+set yt=yt-1
+set Oc=bt[yt]
+set et[Oc]=56
+endif
+set gs[Oc]=vs[cc]
+set hs[Oc]=xs[cc]
+set Fs[Oc]=ms[cc]
+set ks[Oc]=Qs[cc]
+set pc=sb()
+call Lb(tt,GetHandleId(pc),Oc)
+call TimerStart(pc,0.,false,Ui)
+set h[Oc]=pc
+else
+set Oc=cc
+set ec=gs[cc]
+loop
+exitwhen FirstOfGroup(ec)==null
+set lc=FirstOfGroup(ec)
+call GroupRemoveUnit(ec,lc)
+if UnitAlive(lc) then
+call UnitDamageTarget(hs[Oc],lc,Fs[Oc],false,false,ATTACK_TYPE_CHAOS,DAMAGE_TYPE_UNIVERSAL,WEAPON_TYPE_WHOKNOWS)
+call wo(lc,2.,"Abilities\\Spells\\Undead\\FreezingBreath\\FreezingBreathTargetArt.mdl","origin")
+call Gc("Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl",GetUnitX(lc),GetUnitY(lc))
+endif
+endloop
+set ec=ks[Oc]
+loop
+exitwhen FirstOfGroup(ec)==null
+set lc=FirstOfGroup(ec)
+call GroupRemoveUnit(ec,lc)
+call KillUnit(lc)
+endloop
+call DestroyGroup(ks[Oc])
+call DestroyGroup(gs[Oc])
+endif
+call ib(h[cc])
+if et[cc]==0 then
+call kc("Double free: object of type CallbackSingle")
+else
+set bt[yt]=cc
+set yt=yt+1
+set et[cc]=0
+endif
+set lc=null
+set bc=null
+set pc=null
+set ec=null
+endfunction
+function pO takes nothing returns boolean
+set cu=CreateGroup()
+set Yw=y
+call yO(1144008752,Di)
+return true
+endfunction
+function pl takes nothing returns nothing
+local integer yl=cr
+local unit ol=GetTriggerUnit()
+local real Ol=(8-1*GetUnitAbilityLevel(ol,1144008755))*1./100/40
+local effect ll
+local unit bl
+call SetPlayerAbilityAvailable(GetOwningPlayer(ol),1144008755,false)
+call UnitAddAbility(ol,1144008756)
+call StartSound(er[yl])
+set ll=AddSpecialEffectTarget("HolyBlessing.mdx",ol,"origin")
+set bl=CreateUnit(GetOwningPlayer(ol),1697656898,0.,0.,0.)
+if Rt==0 then
+if Tt<32768 then
+set Tt=Tt+1
+set yl=Tt
+set Yt[yl]=34
+else
+call kc("Out of memory: Could not create Closure.")
+set yl=0
+endif
+else
+set Rt=Rt-1
+set yl=ft[Rt]
+set Yt[yl]=34
+endif
+set lr[yl]=ol
+set br[yl]=Ol
+set yr[yl]=bl
+set pr[yl]=ll
+call hS(0.025,yl)
+set ol=null
+set ll=null
+set bl=null
+endfunction
+function po takes nothing returns boolean
+set C=CreateGroup()
+return true
+endfunction
+function ql takes nothing returns boolean
+set qr=l
+call yO(1144008757,Li)
+return true
+endfunction
+function qo takes nothing returns boolean
+set B=InitHashtable()
+set N=InitHashtable()
+return true
+endfunction
+function rS takes nothing returns boolean
+set n=CreateGroup()
+set R=Filter(Qi)
+return true
+endfunction
+function rc takes nothing returns nothing
+local integer BS=ub(GetExpiredTimer())
+local unit NS
+local real MS
+local unit wc
+local boolean uc
+if Yt[BS]<=32 then
+if Yt[BS]<=31 then
+call SetFloatGameState(GAME_STATE_TIME_OF_DAY,6.)
+else
+call SetCameraField(CAMERA_FIELD_TARGET_DISTANCE,2400.,0.)
+endif
+elseif Yt[BS]<=33 then
+if ew then
+set wc=bw
+set NS=bw
+set MS=GetUnitState(NS,UNIT_STATE_MAX_LIFE)
+call SetUnitState(wc,UNIT_STATE_LIFE,MS)
+set wc=bw
+call SetUnitState(wc,UNIT_STATE_MANA,0.)
+set wc=yw
+set NS=yw
+set MS=GetUnitState(NS,UNIT_STATE_MAX_LIFE)
+call SetUnitState(wc,UNIT_STATE_LIFE,MS)
+set wc=yw
+call SetUnitState(wc,UNIT_STATE_MANA,0.)
+call SetUnitInvulnerable(bw,true)
+call SetUnitInvulnerable(yw,true)
+endif
+else
+set wc=lr[BS]
+set MS=GetUnitState(wc,UNIT_STATE_MANA)
+if UnitAlive(lr[BS]) then
+set uc=GetUnitAbilityLevel(lr[BS],1144008756)>0
+else
+set uc=false
+endif
+if uc and MS>=20. then
+set NS=lr[BS]
+set wc=lr[BS]
+set MS=MS-GetUnitState(wc,UNIT_STATE_MAX_MANA)*br[BS]
+call SetUnitState(NS,UNIT_STATE_MANA,MS)
+else
+call RemoveUnit(yr[BS])
+call DestroyEffect(pr[BS])
+call UnitRemoveAbility(lr[BS],1144008756)
+call SetPlayerAbilityAvailable(GetOwningPlayer(lr[BS]),1144008755,true)
+call ib(g[BS])
+if Yt[BS]==0 then
+call kc("Double free: object of type CallbackPeriodic")
+else
+set ft[Rt]=BS
+set Rt=Rt+1
+set Yt[BS]=0
+endif
+endif
+endif
+set NS=null
+set wc=null
+endfunction
+function sS takes nothing returns nothing
+call xb(d[f-1],GetFilterUnit())
+endfunction
+function uS takes nothing returns boolean
+return true
+endfunction
+function vo takes nothing returns nothing
+local unit Go=GetTriggerUnit()
+local player go
+local player ho
+local integer Fo
+local real ko
+local unit jo
+local real xo
+if not IsUnitType(Go,UNIT_TYPE_HERO) then
+if yt==0 then
+if pt<32768 then
+set pt=pt+1
+set Fo=pt
+set et[Fo]=41
+else
+call kc("Out of memory: Could not create Closure.")
+set Fo=0
+endif
+else
+set yt=yt-1
+set Fo=bt[yt]
+set et[Fo]=41
+endif
+set nw[Fo]=Go
+call Sc(Fo,3.)
+else
+set ew=true
+set jo=bw
+if fw==qw then
+call SelectUnit(jo,true)
+endif
+set jo=yw
+if fw==aw then
+call SelectUnit(jo,true)
+endif
+if IsUnitType(Go,UNIT_TYPE_HERO) then
+set Fo=GetHeroLevel(Go)
+else
+set Fo=GetUnitLevel(Go)
+endif
+set Fo=Fo+pw
+call SetHeroLevel(bw,Fo,false)
+call SetHeroLevel(yw,Fo,false)
+if pw==2 then
+set Fo=3
+else
+set Fo=2
+endif
+set pw=Fo
+call SetUnitInvulnerable(bw,true)
+call SetUnitInvulnerable(bw,false)
+set ho=qw
+set go=qw
+set Fo=GetPlayerState(go,PLAYER_STATE_RESOURCE_GOLD)+1000
+call SetPlayerState(ho,PLAYER_STATE_RESOURCE_GOLD,Fo)
+set ho=aw
+set go=aw
+set Fo=GetPlayerState(go,PLAYER_STATE_RESOURCE_GOLD)+1000
+call SetPlayerState(ho,PLAYER_STATE_RESOURCE_GOLD,Fo)
+if not UnitAlive(bw) then
+set go=aw
+set ho=aw
+set Fo=GetPlayerState(ho,PLAYER_STATE_RESOURCE_GOLD)+250
+call SetPlayerState(go,PLAYER_STATE_RESOURCE_GOLD,Fo)
+set ko=uw
+set xo=rw
+call ReviveHero(bw,ko,xo,false)
+call DisplayTimedTextToPlayer(fw,0.,0.,4.,GetPlayerName(aw)+" убил игрока "+GetPlayerName(qw))
+endif
+if not UnitAlive(yw) then
+set ho=qw
+set go=qw
+set Fo=GetPlayerState(go,PLAYER_STATE_RESOURCE_GOLD)+250
+call SetPlayerState(ho,PLAYER_STATE_RESOURCE_GOLD,Fo)
+set ko=sw
+set xo=tw
+call ReviveHero(yw,ko,xo,false)
+call DisplayTimedTextToPlayer(fw,0.,0.,4.,GetPlayerName(qw)+" убил игрока "+GetPlayerName(aw))
+endif
+set ko=uw
+set xo=rw
+call SetUnitPosition(bw,ko,xo)
+set ho=qw
+set ko=GetUnitX(bw)
+set xo=GetUnitY(bw)
+if GetLocalPlayer()==ho then
+call SetCameraPosition(ko,xo)
+endif
+set ko=sw
+set xo=tw
+call SetUnitPosition(yw,ko,xo)
+set ho=aw
+set ko=GetUnitX(yw)
+set xo=GetUnitY(yw)
+if GetLocalPlayer()==ho then
+call SetCameraPosition(ko,xo)
+endif
+call SetUnitInvulnerable(bw,true)
+call SetUnitInvulnerable(bw,true)
+set jo=bw
+set Go=bw
+set xo=GetUnitState(Go,UNIT_STATE_MAX_LIFE)
+call SetUnitState(jo,UNIT_STATE_LIFE,xo)
+set Go=bw
+call SetUnitState(Go,UNIT_STATE_MANA,0.)
+set jo=yw
+set Go=yw
+set xo=GetUnitState(Go,UNIT_STATE_MAX_LIFE)
+call SetUnitState(jo,UNIT_STATE_LIFE,xo)
+set Go=yw
+call SetUnitState(Go,UNIT_STATE_MANA,0.)
+if at==0 then
+if nt<32768 then
+set nt=nt+1
+set Fo=nt
+set dt[Fo]=8
+else
+call kc("Out of memory: Could not create Closure.")
+set Fo=0
+endif
+else
+set at=at-1
+set Fo=qt[at]
+set dt[Fo]=8
+endif
+set Y[Fo]=0
+call WS(Fo,1.,10)
+endif
+set Go=null
+set go=null
+set ho=null
+set jo=null
+endfunction
+function wS takes nothing returns boolean
+return true
+endfunction
+function yo takes nothing returns nothing
+set X=X+0.030
+endfunction
+function Bi takes nothing returns nothing
+set Nt=function Jo
+set Mt=function mo
+set wi=function wS
+set ui=function Cl
+set ri=function Ob
+set si=function Io
+set ti=function uS
+set ii=function Vl
+set Si=function Po
+set ci=function fc
+set oi=function po
+set Oi=function Ao
+set li=function bo
+set bi=function Wo
+set yi=function gc
+set pi=function Qo
+set ei=function Eo
+set qi=function Sb
+set ai=function rS
+set ni=function Ml
+set di=function YS
+set fi=function jc
+set Ri=function qo
+set Ti=function Lo
+set Yi=function Yo
+set Gi=function cl
+set gi=function pO
+set hi=function FO
+set Fi=function jO
+set ki=function HO
+set ji=function ql
+set xi=function Xl
+set vi=function Tl
+set mi=function Kl
+set Qi=function sS
+set Wi=function rc
+set Ei=function VS
+set Zi=function eo
+set Ui=function nc
+set Ii=function yo
+set Pi=function vo
+set Ai=function SO
+set Di=function gO
+set Hi=function AO
+set Ji=function pl
+set Ki=function el
+set Li=function Rl
+set Xi=function Hl
+endfunction
+function main takes nothing returns nothing
+local trigger Ni
+local real Mi
+call Bi()
+call SetCameraBounds((-3328.0)+GetCameraMargin(CAMERA_MARGIN_LEFT),(-3584.0)+GetCameraMargin(CAMERA_MARGIN_BOTTOM),7424.0-GetCameraMargin(CAMERA_MARGIN_RIGHT),11264.0-GetCameraMargin(CAMERA_MARGIN_TOP),(-3328.0)+GetCameraMargin(CAMERA_MARGIN_LEFT),11264.0-GetCameraMargin(CAMERA_MARGIN_TOP),7424.0-GetCameraMargin(CAMERA_MARGIN_RIGHT),(-3584.0)+GetCameraMargin(CAMERA_MARGIN_BOTTOM))
+call SetDayNightModels("Environment\\DNC\\DNCLordaeron\\DNCLordaeronTerrain\\DNCLordaeronTerrain.mdl","Environment\\DNC\\DNCLordaeron\\DNCLordaeronUnit\\DNCLordaeronUnit.mdl")
+call NewSoundEnvironment("Default")
+if bj_dayAmbientSound!=null then
+call StopSound(bj_dayAmbientSound,true,true)
+endif
+set bj_dayAmbientSound=CreateMIDISound("LordaeronSummerDay",20,20)
+set Mi=GetFloatGameState(GAME_STATE_TIME_OF_DAY)
+if Mi>=bj_TOD_DAWN and Mi<bj_TOD_DUSK then
+call StartSound(bj_dayAmbientSound)
+endif
+if bj_nightAmbientSound!=null then
+call StopSound(bj_nightAmbientSound,true,true)
+endif
+set bj_nightAmbientSound=CreateMIDISound("LordaeronSummerNight",20,20)
+set Mi=GetFloatGameState(GAME_STATE_TIME_OF_DAY)
+if Mi<bj_TOD_DAWN or Mi>=bj_TOD_DUSK then
+call StartSound(bj_nightAmbientSound)
+endif
+call SetMapMusic("Music",true,0)
+set t=CreateSound("war3mapImported\\Rukia_Q_01.mp3",false,false,false,10,10,"DefaultEAXON")
+call SetSoundDuration(t,1069)
+call SetSoundChannel(t,0)
+call SetSoundVolume(t,127)
+call SetSoundPitch(t,1.0)
+set i=CreateSound("war3mapImported\\Rukia_W_01.mp3",false,false,false,10,10,"")
+call SetSoundDuration(i,2240)
+call SetSoundChannel(i,0)
+call SetSoundVolume(i,127)
+call SetSoundPitch(i,1.0)
+set S=CreateSound("war3mapImported\\Rukia_R_01.mp3",false,false,false,10,10,"DefaultEAXON")
+call SetSoundDuration(S,2446)
+call SetSoundChannel(S,0)
+call SetSoundVolume(S,127)
+call SetSoundPitch(S,1.0)
+set c=CreateSound("war3mapImported\\Rukia_E_ALT_01.mp3",false,false,false,10,10,"")
+call SetSoundDuration(c,2929)
+call SetSoundChannel(c,0)
+call SetSoundVolume(c,127)
+call SetSoundPitch(c,1.0)
+set o=CreateSound("war3mapImported\\Rukia_W_ALT_01.mp3",false,false,false,10,10,"")
+call SetSoundDuration(o,1207)
+call SetSoundChannel(o,0)
+call SetSoundVolume(o,127)
+call SetSoundPitch(o,1.0)
+set O=CreateSound("war3mapImported\\Rukia_W_ALT_02.mp3",false,false,false,10,10,"")
+call SetSoundDuration(O,1018)
+call SetSoundChannel(O,0)
+call SetSoundVolume(O,127)
+call SetSoundPitch(O,1.0)
+set l=CreateSound("war3mapImported\\Rukia_T_01.mp3",false,false,false,10,10,"")
+call SetSoundDuration(l,13907)
+call SetSoundChannel(l,0)
+call SetSoundVolume(l,127)
+call SetSoundPitch(l,1.0)
+set b=CreateSound("war3mapImported\\Rukia_W_02.mp3",false,false,false,10,10,"")
+call SetSoundDuration(b,4382)
+call SetSoundChannel(b,0)
+call SetSoundVolume(b,127)
+call SetSoundPitch(b,1.0)
+set y=CreateSound("war3mapImported\\Rukia_E_01.mp3",false,false,false,10,10,"")
+call SetSoundDuration(y,1892)
+call SetSoundChannel(y,0)
+call SetSoundVolume(y,127)
+call SetSoundPitch(y,1.0)
+set p=CreateSound("war3mapImported\\Rukia_Q_ALT_01.mp3",false,false,false,10,10,"")
+call SetSoundDuration(p,710)
+call SetSoundChannel(p,0)
+call SetSoundVolume(p,127)
+call SetSoundPitch(p,1.0)
+set e=CreateSound("war3mapImported\\Rukia_Q_02.mp3",false,false,false,10,10,"")
+call SetSoundDuration(e,2179)
+call SetSoundChannel(e,0)
+call SetSoundVolume(e,127)
+call SetSoundPitch(e,1.0)
+set q=CreateSound("war3mapImported\\Rukia_E_ALT_02.mp3",false,false,false,10,10,"")
+call SetSoundDuration(q,1076)
+call SetSoundChannel(q,0)
+call SetSoundVolume(q,127)
+call SetSoundPitch(q,1.0)
+set a=CreateSound("war3mapImported\\Rukia_Q_ALT_02.mp3",false,false,false,10,10,"DefaultEAXON")
+call SetSoundDuration(a,727)
+call SetSoundChannel(a,0)
+call SetSoundVolume(a,127)
+call SetSoundPitch(a,1.0)
+set w=Rect(-2048.0,9184.0,-1600.0,9568.0)
+set u=Rect(-608.0,9184.0,-160.0,9568.0)
+call Rect(-3296.0,7552.0,1280.0,11232.0)
+set r=Rect(1088.0,-2944.0,1664.0,-2528.0)
+set s=Rect(1216.0,4064.0,1888.0,4608.0)
+call CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE),1144600889,-1152.0,9344.0,270.000)
+call InitBlizzard()
+set Ni=CreateTrigger()
+call TriggerAddCondition(Ni,Condition(Nt))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Real.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(Mt))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Integer.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(wi))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Angle.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(ui))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package String.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(ri))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Vectors.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(si))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Player.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(ti))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Basics.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(ii))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Table.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(Si))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Playercolor.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(ci))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Colors.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(oi))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Group.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(Oi))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Printing.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(li))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package GameTimer.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(bi))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package MagicFunctions.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(yi))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package ErrorHandling.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(pi))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Lightning.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(ei))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Maths.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(qi))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package TypeCasting.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(ai))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package ClosureForGroups.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(ni))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package TimerUtils.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(di))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package ClosureTimers.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(fi))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Fast.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(Ri))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package HashList.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(Ti))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package RegisterEvents.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(Yi))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Init.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(Gi))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Rukia_R.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(gi))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Rukia_E.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(hi))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Rukia_E_ALT.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(Fi))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Rukia_Q.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(ki))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Rukia_Q_ALT.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(ji))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Rukia_T.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(xi))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Rukia_W_THIRD_DANCE.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(vi))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Rukia_W.")
+endif
+call TriggerClearConditions(Ni)
+call TriggerAddCondition(Ni,Condition(mi))
+if not TriggerEvaluate(Ni) then
+call DisplayTimedTextToPlayer(GetLocalPlayer(),0.,0.,45.,"Could not initialize package Rukia_W_ALT.")
+endif
+call TriggerClearConditions(Ni)
+call DestroyTrigger(Ni)
+set Ni=null
+endfunction
+function config takes nothing returns nothing
+call SetMapName("TRIGSTR_008")
+call SetMapDescription("")
+call SetPlayers(10)
+call SetTeams(10)
+call SetGamePlacement(MAP_PLACEMENT_TEAMS_TOGETHER)
+call DefineStartLocation(0,-4032.0,-3904.0)
+call DefineStartLocation(1,5312.0,-640.0)
+call DefineStartLocation(2,-896.0,-1792.0)
+call DefineStartLocation(3,-1088.0,8192.0)
+call DefineStartLocation(4,1856.0,-2048.0)
+call DefineStartLocation(5,-896.0,9984.0)
+call DefineStartLocation(6,3520.0,-704.0)
+call DefineStartLocation(7,192.0,-2624.0)
+call DefineStartLocation(8,1728.0,2496.0)
+call DefineStartLocation(9,-2624.0,8192.0)
+call SetPlayerStartLocation(Player(0),0)
+call ForcePlayerStartLocation(Player(0),0)
+call SetPlayerColor(Player(0),ConvertPlayerColor(0))
+call SetPlayerRacePreference(Player(0),RACE_PREF_HUMAN)
+call SetPlayerRaceSelectable(Player(0),false)
+call SetPlayerController(Player(0),MAP_CONTROL_USER)
+call SetPlayerStartLocation(Player(1),1)
+call ForcePlayerStartLocation(Player(1),1)
+call SetPlayerColor(Player(1),ConvertPlayerColor(1))
+call SetPlayerRacePreference(Player(1),RACE_PREF_HUMAN)
+call SetPlayerRaceSelectable(Player(1),false)
+call SetPlayerController(Player(1),MAP_CONTROL_RESCUABLE)
+call SetPlayerAlliance(Player(1),Player(0),ALLIANCE_RESCUABLE,true)
+call SetPlayerAlliance(Player(1),Player(5),ALLIANCE_RESCUABLE,true)
+call SetPlayerStartLocation(Player(2),2)
+call ForcePlayerStartLocation(Player(2),2)
+call SetPlayerColor(Player(2),ConvertPlayerColor(2))
+call SetPlayerRacePreference(Player(2),RACE_PREF_HUMAN)
+call SetPlayerRaceSelectable(Player(2),false)
+call SetPlayerController(Player(2),MAP_CONTROL_RESCUABLE)
+call SetPlayerAlliance(Player(2),Player(0),ALLIANCE_RESCUABLE,true)
+call SetPlayerAlliance(Player(2),Player(5),ALLIANCE_RESCUABLE,true)
+call SetPlayerStartLocation(Player(3),3)
+call ForcePlayerStartLocation(Player(3),3)
+call SetPlayerColor(Player(3),ConvertPlayerColor(3))
+call SetPlayerRacePreference(Player(3),RACE_PREF_HUMAN)
+call SetPlayerRaceSelectable(Player(3),false)
+call SetPlayerController(Player(3),MAP_CONTROL_RESCUABLE)
+call SetPlayerAlliance(Player(3),Player(0),ALLIANCE_RESCUABLE,true)
+call SetPlayerAlliance(Player(3),Player(5),ALLIANCE_RESCUABLE,true)
+call SetPlayerStartLocation(Player(4),4)
+call ForcePlayerStartLocation(Player(4),4)
+call SetPlayerColor(Player(4),ConvertPlayerColor(4))
+call SetPlayerRacePreference(Player(4),RACE_PREF_HUMAN)
+call SetPlayerRaceSelectable(Player(4),false)
+call SetPlayerController(Player(4),MAP_CONTROL_RESCUABLE)
+call SetPlayerAlliance(Player(4),Player(0),ALLIANCE_RESCUABLE,true)
+call SetPlayerAlliance(Player(4),Player(5),ALLIANCE_RESCUABLE,true)
+call SetPlayerStartLocation(Player(5),5)
+call ForcePlayerStartLocation(Player(5),5)
+call SetPlayerColor(Player(5),ConvertPlayerColor(5))
+call SetPlayerRacePreference(Player(5),RACE_PREF_HUMAN)
+call SetPlayerRaceSelectable(Player(5),false)
+call SetPlayerController(Player(5),MAP_CONTROL_USER)
+call SetPlayerStartLocation(Player(6),6)
+call ForcePlayerStartLocation(Player(6),6)
+call SetPlayerColor(Player(6),ConvertPlayerColor(6))
+call SetPlayerRacePreference(Player(6),RACE_PREF_HUMAN)
+call SetPlayerRaceSelectable(Player(6),false)
+call SetPlayerController(Player(6),MAP_CONTROL_RESCUABLE)
+call SetPlayerAlliance(Player(6),Player(0),ALLIANCE_RESCUABLE,true)
+call SetPlayerAlliance(Player(6),Player(5),ALLIANCE_RESCUABLE,true)
+call SetPlayerStartLocation(Player(7),7)
+call ForcePlayerStartLocation(Player(7),7)
+call SetPlayerColor(Player(7),ConvertPlayerColor(7))
+call SetPlayerRacePreference(Player(7),RACE_PREF_HUMAN)
+call SetPlayerRaceSelectable(Player(7),false)
+call SetPlayerController(Player(7),MAP_CONTROL_RESCUABLE)
+call SetPlayerAlliance(Player(7),Player(0),ALLIANCE_RESCUABLE,true)
+call SetPlayerAlliance(Player(7),Player(5),ALLIANCE_RESCUABLE,true)
+call SetPlayerStartLocation(Player(8),8)
+call ForcePlayerStartLocation(Player(8),8)
+call SetPlayerColor(Player(8),ConvertPlayerColor(8))
+call SetPlayerRacePreference(Player(8),RACE_PREF_HUMAN)
+call SetPlayerRaceSelectable(Player(8),false)
+call SetPlayerController(Player(8),MAP_CONTROL_RESCUABLE)
+call SetPlayerAlliance(Player(8),Player(0),ALLIANCE_RESCUABLE,true)
+call SetPlayerAlliance(Player(8),Player(5),ALLIANCE_RESCUABLE,true)
+call SetPlayerStartLocation(Player(9),9)
+call ForcePlayerStartLocation(Player(9),9)
+call SetPlayerColor(Player(9),ConvertPlayerColor(9))
+call SetPlayerRacePreference(Player(9),RACE_PREF_HUMAN)
+call SetPlayerRaceSelectable(Player(9),false)
+call SetPlayerController(Player(9),MAP_CONTROL_RESCUABLE)
+call SetPlayerAlliance(Player(9),Player(0),ALLIANCE_RESCUABLE,true)
+call SetPlayerAlliance(Player(9),Player(5),ALLIANCE_RESCUABLE,true)
+call SetPlayerTeam(Player(0),0)
+call SetPlayerTeam(Player(1),0)
+call SetPlayerTeam(Player(2),0)
+call SetPlayerTeam(Player(3),0)
+call SetPlayerTeam(Player(4),0)
+call SetPlayerTeam(Player(5),1)
+call SetPlayerTeam(Player(6),1)
+call SetPlayerTeam(Player(7),1)
+call SetPlayerTeam(Player(8),1)
+call SetPlayerTeam(Player(9),1)
+endfunction

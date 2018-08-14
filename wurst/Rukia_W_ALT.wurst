@@ -1,0 +1,82 @@
+package Rukia_W_ALT
+
+import ClosureTimers
+import ClosureForGroups
+import Fast
+import Rukia_W
+
+public class Rukia_W_ALT
+    static let spell = new Spell()
+
+class Spell
+    let distance = 1600.
+    let speed = 65.
+    let radius = 230.
+    let stunDuration = 2.
+    let damageStartAwaitValue = 0.4
+    let damageAwaitValue = 0.
+    let spawnInterval = 0.1
+    let stunInterval = 0.01
+    let interval = 0.025
+    let duration = distance / speed * interval
+    let fullDuration = distance / speed * interval + damageAwaitValue + damageStartAwaitValue
+    let dummyId = 'e003'
+    let traceId = 'e004'
+    let damageEffectName = "Abilities\\Spells\\Undead\\FreezingBreath\\FreezingBreathTargetArt.mdl"
+    let damageBurstEffectName = "Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl"
+    let castSound = gg_snd_Rukia_W_ALT_01
+    let damageSound = gg_snd_Rukia_W_ALT_02
+
+    function cast(unit caster, vec2 castPoint)
+        let traceGroup = CreateGroup()
+        let victims = CreateGroup()
+        let casterOwner = caster.getOwner()
+        let damage = 0.5 * caster.getInt(true) + caster.getAbilityLevel(Rukia_W.id) * 30
+        let spellAngle = angleBetween(caster, castPoint)
+        let dummy = createUnit(casterOwner, dummyId, getPosToward(caster, 60, spellAngle), spellAngle)
+
+        castSound.play()
+
+        caster.setTimeScale(1.5)
+        doPeriodicallyTimed(0.01, 0.05) cb ->
+            caster.setAnimation(14)
+
+        doPeriodicallyTimed(stunInterval, fullDuration) cb ->
+            caster.issueImmediateOrderById(STUN)
+    
+            for victim in victims
+                if victim.isAlive()
+                    victim.issueImmediateOrderById(STUN)
+                else
+                    victims.removeUnit(victim)
+
+        doPeriodicallyTimed(spawnInterval, duration) cb ->
+            if not cb.isLast()
+                let dummyPos = dummy.getPos()
+                let trace = createUnit(casterOwner, traceId, dummyPos, GetRandomReal(0, 360))
+                traceGroup.addUnit(trace)
+                forUnitsInRange(dummyPos, radius) victim ->
+                    if victim.isAlive() and IsUnitEnemy(victim, casterOwner) and not victims.contains(victim)
+                        victims.addUnit(victim)
+
+        doPeriodicallyTimed(interval, duration) cb ->
+            moveForward(dummy, speed)
+            
+            if cb.isLast()
+                dummy.remove()
+                caster.setTimeScale(1)
+                caster.setAnimation(16)
+                doAfter(damageStartAwaitValue) ->
+                    damageSound.play()
+                    caster.setAnimation(15)
+                    doAfter(damageAwaitValue) ->
+                        for victim from victims
+                            if victim.isAlive()
+                                caster.damageTarget(victim, damage)
+                                stunWithEffect(victim, stunDuration, damageEffectName, "origin")
+                                flashEffect(damageBurstEffectName, victim.getPos())
+                        for tmp from traceGroup
+                            tmp.kill()
+                        
+                        traceGroup.destr()
+                        victims.destr()

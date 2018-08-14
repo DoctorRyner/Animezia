@@ -1,0 +1,64 @@
+package Rukia_E_ALT
+
+import ClosureForGroups
+import ClosureTimers
+import Fast
+import Rukia_E
+
+class Rukia_E_ALT
+    static let affectedUnits = CreateGroup()
+    static let spell = new Spell()
+
+class Spell
+    let dummyTraceId = 'e001'
+    let dummyExpId = 'e002'
+    let radius = 680.
+    let stunDuration = 3.
+    let stunEffectName = "iceflower.mdx"
+    let castSound = gg_snd_Rukia_E_ALT_01
+    let doubleCastSound = gg_snd_Rukia_E_ALT_02
+
+    function cast(unit caster, vec2 castPoint)
+        let spellLevel = caster.getAbilityLevel(Rukia_E.id)
+        let damage = 0.5 * spellLevel * caster.getInt(true)
+        let casterOwner = caster.getOwner()
+
+        if distanceBetween(caster.getPos(), castPoint) > 100
+            castSound.play()
+            let dummyTrace = createUnit(casterOwner, dummyTraceId, castPoint, angle(0))
+            SetUnitTimeScale(caster, 1.5)
+            doPeriodicallyTimed(0.01, 0.05) cb ->
+                caster.setAnimation(15)
+
+            doPeriodicallyTimed(0.01, 0.6) cb ->
+                caster.issueImmediateOrderById(STUN)
+                if cb.isLast()
+                    SetUnitTimeScale(caster, 1)
+
+            doAfter(1.7) ->
+                dummyTrace.remove()
+                let dummyExp = createUnit(casterOwner, dummyExpId, castPoint, angle(0))
+                forUnitsInRange(castPoint, radius) victim ->
+                    if victim.isAlive() and not IsUnitAlly(victim, casterOwner)
+                        caster.damageTarget(victim, damage)
+                        Rukia_E_ALT.affectedUnits.addUnit(victim)
+                        stunWithEffect(victim, stunDuration, stunEffectName, "origin")
+                        doAfter(stunDuration, () -> Rukia_E_ALT.affectedUnits.removeUnit(victim))
+                doAfter(3, () -> dummyExp.remove())
+        else
+            doubleCastSound.play()
+            let dummyExp = createUnit(casterOwner, dummyExpId, caster.getPos(), angle(0))
+            forUnitsInRange(castPoint, radius) victim ->
+                if victim.isAlive() and not IsUnitAlly(victim, casterOwner)
+                    caster.damageTarget(victim, damage)
+                    stunWithEffect(victim, stunDuration, stunEffectName, "origin")
+                    Rukia_E_ALT.affectedUnits.addUnit(victim)
+                    doAfter(stunDuration, () -> Rukia_E_ALT.affectedUnits.removeUnit(victim))
+            doAfter(3, () -> dummyExp.remove())
+
+            caster.setInvulnerable(true)
+            doPeriodicallyTimed(0.01, 1.2) cb ->
+                caster.issueImmediateOrderById(STUN)
+                if cb.isLast()
+                    caster.setInvulnerable(false)
+

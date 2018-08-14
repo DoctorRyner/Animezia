@@ -1,0 +1,17 @@
+package WurstExportedObjects_w3h
+import ObjEditingNatives
+
+// Modified Table (contains all custom objects)
+
+@compiletime function create_w3h_D007()
+	let def = createObjectDefinition("w3h", 'D007', 'BUau')
+	..setString("fnam", "SlowDown")
+	..setString("ftat", "")
+	..setString("fube", "Юнит замедлен")
+	..setString("ftip", "Замедление")
+
+
+// Original Table (contains all modified default objects)
+// Wurst does not support modifying default objects
+// but you can copy these functions and replace 'xxxx' with a new, custom id.
+
