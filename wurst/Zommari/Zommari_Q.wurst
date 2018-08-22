@@ -1,0 +1,12 @@
+package Zommari_Q
+
+import RegisterEvents
+
+let id = 'D014'
+
+function cast(unit caster)
+    
+
+init
+    registerSpellEffectEvent(id) ->
+        cast(GetTriggerUnit())

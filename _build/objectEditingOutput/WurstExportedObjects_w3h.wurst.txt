@@ -3,8 +3,19 @@ import ObjEditingNatives
 
 // Modified Table (contains all custom objects)
 
-@compiletime function create_w3h_D007()
-	let def = createObjectDefinition("w3h", 'D007', 'BUau')
+@compiletime function create_w3h_B000()
+	let def = createObjectDefinition("w3h", 'B000', 'Bbsk')
+	..setString("fnam", "Sode No Shirayuki")
+	..setString("ftat", "")
+	..setString("fart", "ReplaceableTextures\\PassiveButtons\\PASBTNElunesBlessing.blp")
+	..setString("fta0", "")
+	..setString("fta1", "")
+	..setString("ftip", "Sode No Shirayuki")
+	..setString("fube", "Высвобождение меча")
+
+
+@compiletime function create_w3h_D200()
+	let def = createObjectDefinition("w3h", 'D200', 'BUau')
 	..setString("fnam", "SlowDown")
 	..setString("ftat", "")
 	..setString("fube", "Юнит замедлен")

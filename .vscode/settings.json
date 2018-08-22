@@ -1,0 +1,7 @@
+{
+   "wurst.wurstJar": "/Users/local/.wurst/wurstscript.jar",
+   "wurst.wc3path": "%gamepath%",
+   "files.associations": {
+       "wurst.build": "yaml"
+   }
+}

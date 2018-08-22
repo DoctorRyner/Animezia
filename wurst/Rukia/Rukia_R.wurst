@@ -8,9 +8,8 @@ class Rukia_R
 
 class Spell
     let id = 'D003'
-    let disableId = 'D004'
+    let disableId = 'D013'
     let dummyForBankaiId = 'e00B'
-    // let auraEffectName = "RukiaAura.mdx"
     let auraEffectName = "HolyBlessing.mdx"
     let interval = 0.025
     let castSound = gg_snd_Rukia_R_01
@@ -40,4 +39,5 @@ init
     registerSpellEffectEvent(Rukia_R.spell.id) ->
         Rukia_R.spell.cast(GetTriggerUnit())
     registerSpellEffectEvent(Rukia_R.spell.disableId) ->
-        GetTriggerUnit().removeAbility(Rukia_R.spell.disableId)
+        let caster = GetTriggerUnit()
+        doAfter(0.02, () -> caster.removeAbility(Rukia_R.spell.disableId))
